@@ -6,7 +6,7 @@ import com.solvd.block3.ui.UiUtils;
 
 public class Main 
 {
-    private static final Logger LOGGER = LogManager.getLogger("Main");
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
     public static void main(String[] args)
     {
         LOGGER.info("Welcome to the flight finder. Please input an origin city.");

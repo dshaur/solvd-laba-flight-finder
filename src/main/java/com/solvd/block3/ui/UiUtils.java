@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 public class UiUtils 
 {    
     private static final Scanner SCANNER = new Scanner(System.in);
-    private static final Logger LOGGER = LogManager.getLogger("Main");
+    private static final Logger LOGGER = LogManager.getLogger(UiUtils.class);
 
     public static String makeCity()
     {
