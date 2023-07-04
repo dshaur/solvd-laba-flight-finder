@@ -10,29 +10,12 @@ import org.apache.logging.log4j.Logger;
 public class XmlMaker
 {
     private static final Logger LOGGER = LogManager.getLogger(XmlMaker.class);
-    private String path;
-    private Object toParse;
-    private JAXBContext context;
 
-    public XmlMaker(String path, Object toParse) 
+    public static void makeXml(String path, Object toParse)
     {
         try
         {
-            this.path = path;
-            this.toParse = toParse;
-            context = JAXBContext.newInstance(toParse.getClass());
-        }
-
-        catch (JAXBException e)
-        {
-            LOGGER.error(e.getMessage());
-        }
-    }
-
-    public void makeXml()
-    {
-        try
-        {
+            JAXBContext context = JAXBContext.newInstance(toParse.getClass());
             Marshaller marshaller = context.createMarshaller();
             marshaller.marshal(toParse, new File(path));
         }
