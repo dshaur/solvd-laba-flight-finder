@@ -14,7 +14,7 @@ public class UiUtils
         String ret = SCANNER.nextLine();
         while (!validateCity(ret))
         {
-            LOGGER.error("City doesn't exist in database. Please try agian.");
+            LOGGER.error("City doesn't exist in database. Please try again.");
             ret = SCANNER.nextLine();
         }
 
