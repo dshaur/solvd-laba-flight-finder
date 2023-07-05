@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.block3.mappers.FlightMapper">
+
+    <select id="selectFlightById" resultMap="com.solvd.block3.mappers.FlightMapper.flightResultMap">
+        select *
+        from flights F
+        left join airlines A on F.airline_id = A.airline_id
+        left join airports SAP on F.source_airport_id = SAP.airport_id
+        left join airports DAP on F.destination_airport_id = DAP.airport_id
+        where F.flight_id = #{id}
+    </select>
+
+    <select id="selectFlightByAirline" resultMap="com.solvd.block3.mappers.FlightMapper.flightResultMap">
+        select *
+        from flights F
+        left join airlines A on F.airline_id = A.airline_id
+        left join airports SAP on F.source_airport_id = SAP.airport_id
+        left join airports DAP on F.destination_airport_id = DAP.airport_id
+        where F.airline_id = #{id}
+    </select>
+
+    <select id="selectFlightBySourceAirport" resultMap="com.solvd.block3.mappers.FlightMapper.flightResultMap">
+        select *
+        from flights F
+        left join airlines A on F.airline_id = A.airline_id
+        left join airports SAP on F.source_airport_id = SAP.airport_id
+        left join airports DAP on F.destination_airport_id = DAP.airport_id
+        where F.source_airport_id = #{id}
+    </select>
+
+    <select id="selectFlightByDestinationAirport" resultMap="com.solvd.block3.mappers.FlightMapper.flightResultMap">
+        select *
+        from flights F
+        left join airlines A on F.airline_id = A.airline_id
+        left join airports SAP on F.source_airport_id = SAP.airport_id
+        left join airports DAP on F.destination_airport_id = DAP.airport_id
+        where F.destination_airport_id = #{id}
+    </select>
+
+    <select id="selectFlights" resultMap="com.solvd.block3.mappers.FlightMapper.flightResultMap">
+        select *
+        from flights F
+        left join airlines A on F.airline_id = A.airline_id
+        left join airports SAP on F.source_airport_id = SAP.airport_id
+        left join airports DAP on F.destination_airport_id = DAP.airport_id
+    </select>
+
+    <insert id="insertFlight">
+        insert into flights (airline_id, source_airport_id, destination_airport_id, price)
+        values (#{airline.airlineId}, #{sourceAirport.airportId}, #{destinationAirport.airportId}, #{price})
+    </insert>
+
+    <update id="updateFlight">
+        update flights set
+        airline_id = #{airline.airlineId},
+        source_airport_id = #{sourceAirport.airportId},
+        destination_airport_id = #{destinationAirport.airportId},
+        price = #{price}
+        where flight_id = #{flightId}
+    </update>
+
+    <delete id="deleteFlight">
+        delete from flights where flight_id = #{flightId}
+    </delete>
+
+    <resultMap id="flightResultMap" type="com.solvd.block3.models.Flight" autoMapping="false">
+        <id property="flightId" column="flight_id"/>
+        <result property="price" column="price"/>
+        <association property="airline" resultMap="com.solvd.block3.mappers.AirlineMapper.airlineResultMap"></association>
+        <association property="sourceAirport" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap"></association>
+        <association property="destinationAirport" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap"></association>
+    </resultMap>
+</mapper>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.block3.mappers.AirportMapper">
+
+    <select id="selectAirportById" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
+        select *
+        from airports A
+        join cities C on A.city_id = C.city_id
+        where A.airport_id = #{id}
+    </select>
+
+    <select id="selectAirportByName" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
+        select *
+        from airports A
+        join cities C on A.city_id = C.city_id
+        where A.name = #{name}
+    </select>
+
+    <select id="selectAirports" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
+        select *
+        from airports A
+        join cities C on A.city_id = C.city_id
+    </select>
+
+    <insert id="insertAirport">
+        insert into airports (name, city_id, latitude, longitude)
+        values (#{name}, #{city.cityId}, #{latitude}, #{longitude})
+    </insert>
+
+    <update id="updateAirport">
+        update airports set
+        name = #{name},
+        city_id = #{city.cityId},
+        latitude = #{latitude},
+        longitude = #{longitude}
+        where airport_id = #{airportId}
+    </update>
+
+    <delete id="deleteAirport">
+        delete from airports where airport_id = #{airportId}
+    </delete>
+
+    <resultMap id="airportResultMap" type="com.solvd.block3.models.Airport" autoMapping="false">
+        <id property="airportId" column="airport_id"/>
+        <result property="name" column="name"/>
+        <result property="latitude" column="latitude"/>
+        <result property="longitude" column="longitude"/>
+        <association property="city" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap"></association>
+    </resultMap>
+</mapper>
