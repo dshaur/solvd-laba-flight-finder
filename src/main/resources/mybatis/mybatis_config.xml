@@ -20,5 +20,6 @@
         <mapper resource="mybatis/mappers/AirlineMapper.xml"/>
         <mapper resource="mybatis/mappers/CityMapper.xml"/>
         <mapper resource="mybatis/mappers/CountryMapper.xml"/>
+        <mapper resource="mybatis/mappers/FlightMapper.xml"/>
     </mappers>
 </configuration>

@@ -7,21 +7,21 @@
     <select id="selectCityById" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
         select *
         from cities C
-        join counties CO on C.country_id = CO.country_id
+        join countries CO on C.country_id = CO.country_id
         where C.city_id = #{id}
     </select>
 
     <select id="selectCityByName" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
         select *
         from cities C
-        join counties CO on C.country_id = CO.country_id
+        join countries CO on C.country_id = CO.country_id
         where C.name = #{name}
     </select>
 
     <select id="selectCities" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
         select *
         from cities C
-        join counties CO on C.country_id = CO.country_id
+        join countries CO on C.country_id = CO.country_id
     </select>
 
     <insert id="insertCity">
@@ -43,8 +43,6 @@
     <resultMap id="cityResultMap" type="com.solvd.block3.models.City" autoMapping="false">
         <id property="cityId" column="city_id"/>
         <result property="name" column="name"/>
-        <association property="country" resultMap="com.solvd.block3.mappers.CountryMapper.countryResultMap">
-
-        </association>
+        <association property="country" resultMap="com.solvd.block3.mappers.CountryMapper.countryResultMap"></association>
     </resultMap>
 </mapper>

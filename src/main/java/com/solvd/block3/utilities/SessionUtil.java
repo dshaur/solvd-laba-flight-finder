@@ -15,9 +15,7 @@ public class SessionUtil {
 			SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession();
 			return session;
 		} catch (IOException e) {
-//			throw new RuntimeException("Unable to create session");
-			System.out.println(e);
+			throw new RuntimeException("Unable to create session");
 		}
-		return null;
 	}
 }

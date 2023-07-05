@@ -47,8 +47,6 @@
         <result property="name" column="name"/>
         <result property="latitude" column="latitude"/>
         <result property="longitude" column="longitude"/>
-        <association property="city" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
-            <id property="cityId" column="city_id"/>
-        </association>
+        <association property="city" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap"></association>
     </resultMap>
 </mapper>
