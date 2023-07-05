@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="main.java.com.solvd.block3.mappers.AirlineMapper">
+	
+  <select id="selectAirlineById" resultMap="main.java.com.solvd.block3.mappers.AirlineMapper.airlineResultMap">
+    select *
+	from airlines
+	where airline_id = #{id}
+  </select>
+  
+   <select id="selectAirlineByName" resultMap="main.java.com.solvd.block3.mappers.AirlineMapper.airlineResultMap">
+    select *
+	from airlines
+	where name = #{name}
+  </select>
+  
+   <select id="selectAirlines" resultMap="main.java.com.solvd.block3.mappers.AirlineMapper.airlineResultMap">
+    select *
+	from airlines
+  </select>
+  
+  <insert id="insertAirline">
+	  insert into airlines (name)
+	  values (#{name})
+  </insert>
+  
+  <update id="updateAirline">
+	  update airlines set
+	  name = #{name},
+	  where airline_id = #{airlineId}
+  </update>
+  
+  <delete id="deleteAirline">
+	  delete from countries where Airline_id = #{AirlineId}
+  </delete>
+  
+  <resultMap id="airlineResultMap" type="main.java.com.solvd.block3.models.Airline" autoMapping="false">
+	  <id property="airlineId" column="airline_id"/>
+	  <result property="name" column="name"/>
+  </resultMap>
+</mapper>
