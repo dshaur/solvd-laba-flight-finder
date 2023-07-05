@@ -16,9 +16,9 @@
         </environment>
     </environments>
     <mappers>
-      <mapper resource="mappers/AirportMapper.xml"/>
-      <mapper resource="mappers/AirlineMapper.xml"/>
-      <mapper resource="mappers/CityMapper.xml"/>
-      <mapper resource="mappers/CountryMapper.xml"/>
+        <mapper resource="mybatis/mappers/AirportMapper.xml"/>
+        <mapper resource="mybatis/mappers/AirlineMapper.xml"/>
+        <mapper resource="mybatis/mappers/CityMapper.xml"/>
+        <mapper resource="mybatis/mappers/CountryMapper.xml"/>
     </mappers>
 </configuration>

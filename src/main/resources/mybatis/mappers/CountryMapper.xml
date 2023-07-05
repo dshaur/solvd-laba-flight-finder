@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="main.java.com.solvd.block3.mappers.CountryMapper">
-	
-  <select id="selectCountryById" resultMap="main.java.com.solvd.block3.mappers.CountryMapper.countryResultMap">
-    select *
-	from countries
-	where country_id = #{id}
-  </select>
-  
-   <select id="selectCountryByName" resultMap="main.java.com.solvd.block3.mappers.CountryMapper.countryResultMap">
-    select *
-	from countries
-	where name = #{name}
-  </select>
-  
-   <select id="selectCountries" resultMap="main.java.com.solvd.block3.mappers.CountryMapper.countryResultMap">
-    select *
-	from countries
-  </select>
-  
-  <insert id="insertCountry">
-	  insert into counties (name)
-	  values (#{name})
-  </insert>
-  
-  <update id="updateCountry">
-	  update counties set
-	  name = #{name},
-	  where country_id = #{countryId}
-  </update>
-  
-  <delete id="deleteCountry">
-	  delete from countries where country_id = #{countryId}
-  </delete>
-  
-  <resultMap id="countryResultMap" type="main.java.com.solvd.block3.models.Country" autoMapping="false">
-	  <id property="countryId" column="country_id"/>
-	  <result property="name" column="name"/>
-  </resultMap>
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.block3.mappers.CountryMapper">
+
+    <select id="selectCountryById" resultMap="com.solvd.block3.mappers.CountryMapper.countryResultMap">
+        select *
+        from countries
+        where country_id = #{id}
+    </select>
+
+    <select id="selectCountryByName" resultMap="com.solvd.block3.mappers.CountryMapper.countryResultMap">
+        select *
+        from countries
+        where name = #{name}
+    </select>
+
+    <select id="selectCountries" resultMap="com.solvd.block3.mappers.CountryMapper.countryResultMap">
+        select *
+        from countries
+    </select>
+
+    <insert id="insertCountry">
+        insert into counties (name)
+        values (#{name})
+    </insert>
+
+    <update id="updateCountry">
+        update counties set
+        name = #{name},
+        where country_id = #{countryId}
+    </update>
+
+    <delete id="deleteCountry">
+        delete from countries where country_id = #{countryId}
+    </delete>
+
+    <resultMap id="countryResultMap" type="com.solvd.block3.models.Country" autoMapping="false">
+        <id property="countryId" column="country_id"/>
+        <result property="name" column="name"/>
+    </resultMap>
 </mapper>

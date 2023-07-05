@@ -1,48 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="main.java.com.solvd.block3.mappers.CityMapper">
-	
-  <select id="selectCityById" resultMap="main.java.com.solvd.block3.mappers.CityMapper.cityResultMap">
-    select *
-	from cities C
-	join counties CO on C.country_id = CO.country_id
-	where C.city_id = #{id}
-  </select>
-  
-   <select id="selectCityByName" resultMap="main.java.com.solvd.block3.mappers.CityMapper.cityResultMap">
-    select *
-	from cities C
-	join counties CO on C.country_id = CO.country_id
-	where C.name = #{name}
-  </select>
-  
-   <select id="selectCities" resultMap="main.java.com.solvd.block3.mappers.CityMapper.cityResultMap">
-    select *
-	from cities C
-	join counties CO on C.country_id = CO.country_id
-  </select>
-  
-  <insert id="insertCity">
-	  insert into cities (name, country_id)
-	  values (#{name}, #{country.countryId})
-  </insert>
-  
-  <update id="updateCity">
-	  update cities set
-	  name = #{name},
-	  country_id = #{country.countryId},
-	  where city_id = #{cityId}
-  </update>
-  
-  <delete id="deleteCity">
-	  delete from cities where city_id = #{cityId}
-  </delete>
-  
-  <resultMap id="cityResultMap" type="main.java.com.solvd.block3.models.City" autoMapping="false">
-	  <id property="cityId" column="city_id"/>
-	  <result property="name" column="name"/>
-	  <association property="country" resultMap="main.java.com.solvd.block3.mappers.CountryMapper.countryResultMap"></association>
-  </resultMap>
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.block3.mappers.CityMapper">
+
+    <select id="selectCityById" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
+        select *
+        from cities C
+        join counties CO on C.country_id = CO.country_id
+        where C.city_id = #{id}
+    </select>
+
+    <select id="selectCityByName" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
+        select *
+        from cities C
+        join counties CO on C.country_id = CO.country_id
+        where C.name = #{name}
+    </select>
+
+    <select id="selectCities" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
+        select *
+        from cities C
+        join counties CO on C.country_id = CO.country_id
+    </select>
+
+    <insert id="insertCity">
+        insert into cities (name, country_id)
+        values (#{name}, #{country.countryId})
+    </insert>
+
+    <update id="updateCity">
+        update cities set
+        name = #{name},
+        country_id = #{country.countryId},
+        where city_id = #{cityId}
+    </update>
+
+    <delete id="deleteCity">
+        delete from cities where city_id = #{cityId}
+    </delete>
+
+    <resultMap id="cityResultMap" type="com.solvd.block3.models.City" autoMapping="false">
+        <id property="cityId" column="city_id"/>
+        <result property="name" column="name"/>
+        <association property="country" resultMap="com.solvd.block3.mappers.CountryMapper.countryResultMap">
+
+        </association>
+    </resultMap>
 </mapper>
