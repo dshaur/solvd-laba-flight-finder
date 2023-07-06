@@ -68,4 +68,26 @@ public class Airport {
                 "Latitude: " + latitude + "\n" + 
                 "Longitude: " + longitude + "\n";
     }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        Airport toCompare = (Airport) o;
+        if (this.airportId == toCompare.airportId &&
+            this.name.equals(toCompare.name) &&
+            this.latitude == toCompare.latitude &&
+            this.longitude == toCompare.longitude &&
+            this.city.equals(toCompare.city))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return 100 * airportId;
+    }
 }

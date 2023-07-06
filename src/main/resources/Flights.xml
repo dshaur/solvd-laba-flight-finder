@@ -5,21 +5,21 @@
         <name>British Airways</name>
     </airline>
     <destinationAirport>
-        <airportId>5</airportId>
+        <airportId>2</airportId>
         <city>
-            <cityId>5</cityId>
+            <cityId>2</cityId>
             <country>
-                <countryId>5</countryId>
-                <name>Australia</name>
+                <countryId>2</countryId>
+                <name>United States</name>
             </country>
-            <name>Sydney</name>
+            <name>Denver</name>
         </city>
-        <latitude>-33.9461</latitude>
-        <longitude>151.1772</longitude>
-        <name>Sydney Airport</name>
+        <latitude>39.8561</latitude>
+        <longitude>-104.6737</longitude>
+        <name>Denver International Airport</name>
     </destinationAirport>
-    <flightId>42</flightId>
-    <price>1777.02</price>
+    <flightId>40</flightId>
+    <price>824.74</price>
     <sourceAirport>
         <airportId>3</airportId>
         <city>

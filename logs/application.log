@@ -920,3 +920,81 @@ Latitude: -33.9461
 Longitude: 151.1772
 
 Price: 1777.02
+2023-07-06 14:46:01,375 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 14:46:08,218 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 14:46:11,902 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 14:46:14,102 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-06 14:46:21,629 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between Sydney and London is a direct route.
+2023-07-06 14:46:21,630 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of possible flights.
+2023-07-06 14:49:12,074 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 14:49:18,067 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 14:49:22,874 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 14:49:25,242 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-06 14:51:21,436 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 14:51:28,245 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 14:51:33,334 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 14:51:38,998 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-06 14:53:54,495 [main] INFO  com.solvd.block3.ui.UiUtils - false
+2023-07-06 14:54:30,089 [main] INFO  com.solvd.block3.ui.UiUtils - false
+2023-07-06 14:54:56,948 [main] INFO  com.solvd.block3.ui.UiUtils - false
+2023-07-06 14:55:28,199 [main] INFO  com.solvd.block3.ui.UiUtils - Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+2023-07-06 15:13:40,719 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 15:13:46,595 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 15:13:52,840 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 15:13:53,902 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-06 15:14:01,186 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between London and Denver is a direct route.
+2023-07-06 15:14:01,186 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of possible flights.
+2023-07-06 15:14:01,188 [main] INFO  com.solvd.block3.ui.UiUtils - Flight:
+Id: 40
+Airline:
+Airline British Airways:
+Id: 3
+Source Airport:
+Airport Heathrow Airport:
+Id: 3
+City:
+City London:
+Id: 3
+Country:
+Country United Kingdom:
+Id: 3
+
+
+Latitude: 51.47
+Longitude: -0.4543
+
+Destination Airport:
+Airport Denver International Airport:
+Id: 2
+City:
+City Denver:
+Id: 2
+Country:
+Country United States:
+Id: 2
+
+
+Latitude: 39.8561
+Longitude: -104.6737
+
+Price: 824.74
+2023-07-06 15:15:29,561 [main] INFO  com.solvd.block3.business_logic.Main - Starting a log here to get past weird SLF4J lines :)
+2023-07-06 15:15:29,565 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 15:15:35,241 [main] ERROR utils - City doesn't exist in database. Please try again.
+2023-07-06 15:15:50,330 [main] INFO  com.solvd.block3.business_logic.Main - Starting a log here to get past weird SLF4J lines :)
+2023-07-06 15:15:50,334 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 15:15:56,447 [main] ERROR UiUtils.class - City doesn't exist in database. Please try again.
+2023-07-06 15:23:07,678 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 15:23:12,161 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.

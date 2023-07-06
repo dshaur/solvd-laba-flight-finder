@@ -1,5 +1,5 @@
 {
-  "flightId" : 42,
+  "flightId" : 40,
   "airline" : {
     "airlineId" : 3,
     "name" : "British Airways"
@@ -19,18 +19,18 @@
     "longitude" : -0.4543
   },
   "destinationAirport" : {
-    "airportId" : 5,
-    "name" : "Sydney Airport",
+    "airportId" : 2,
+    "name" : "Denver International Airport",
     "city" : {
-      "cityId" : 5,
-      "name" : "Sydney",
+      "cityId" : 2,
+      "name" : "Denver",
       "country" : {
-        "countryId" : 5,
-        "name" : "Australia"
+        "countryId" : 2,
+        "name" : "United States"
       }
     },
-    "latitude" : -33.9461,
-    "longitude" : 151.1772
+    "latitude" : 39.8561,
+    "longitude" : -104.6737
   },
-  "price" : 1777.02
+  "price" : 824.74
 }

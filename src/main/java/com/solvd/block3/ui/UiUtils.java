@@ -70,8 +70,7 @@ public class UiUtils
 
         sourceFlights.forEach(flight -> 
         {   
-            //I should probably use the equals() method, but not too concerned with that right now
-            if (flight.getDestinationAirport().getAirportId() == destAirport.getAirportId())
+            if (flight.getDestinationAirport().equals(destAirport))
             {
                 commonFlights.add(flight);
             }
