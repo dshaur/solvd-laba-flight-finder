@@ -2,7 +2,7 @@ package com.solvd.block3.services;
 
 import com.solvd.block3.interfaces.IAirportService;
 import com.solvd.block3.mappers.AirportMapper;
-import com.solvd.block3.models.Airport;
+import com.solvd.block3.models.*;
 import com.solvd.block3.utilities.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
