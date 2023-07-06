@@ -19,8 +19,7 @@ public class CountryServiceMyBatis implements ICountryService {
 	public Country getCountry(int id) {
 		try (SqlSession session = SessionUtil.openSession()) {
 			countryMapper = session.getMapper(CountryMapper.class);
-			Country country = countryMapper.selectCountryById(id);
-			return country;
+			return countryMapper.selectCountryById(id);
 		}
 	}
 
@@ -28,8 +27,7 @@ public class CountryServiceMyBatis implements ICountryService {
 	public Country getCountryByName(String name) {
 		try (SqlSession session = SessionUtil.openSession()) {
 			countryMapper = session.getMapper(CountryMapper.class);
-			Country country = countryMapper.selectCountryByName(name);
-			return country;
+			return countryMapper.selectCountryByName(name);
 		}
 	}
 
@@ -37,8 +35,7 @@ public class CountryServiceMyBatis implements ICountryService {
 	public ArrayList<Country> getCountries() {
 		try (SqlSession session = SessionUtil.openSession()) {
 			countryMapper = session.getMapper(CountryMapper.class);
-			ArrayList<Country> countries = countryMapper.selectCountries();
-			return countries;
+			return countryMapper.selectCountries();
 		}
 	}
 

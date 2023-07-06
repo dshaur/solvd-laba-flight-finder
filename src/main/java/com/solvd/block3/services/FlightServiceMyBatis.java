@@ -1,10 +1,7 @@
 package com.solvd.block3.services;
 
-import com.solvd.block3.interfaces.IAirlineService;
 import com.solvd.block3.interfaces.IFlightService;
-import com.solvd.block3.mappers.AirlineMapper;
 import com.solvd.block3.mappers.FlightMapper;
-import com.solvd.block3.models.Airline;
 import com.solvd.block3.models.Flight;
 import com.solvd.block3.utilities.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -20,8 +17,7 @@ public class FlightServiceMyBatis implements IFlightService {
     public Flight getFlight(int id) {
         try (SqlSession session = SessionUtil.openSession()) {
             flightMapper = session.getMapper(FlightMapper.class);
-            Flight flight = flightMapper.selectFlightById(id);
-            return flight;
+            return flightMapper.selectFlightById(id);
         }
     }
 
@@ -29,8 +25,7 @@ public class FlightServiceMyBatis implements IFlightService {
     public ArrayList<Flight> getFlightByAirline(int id) {
         try (SqlSession session = SessionUtil.openSession()) {
             flightMapper = session.getMapper(FlightMapper.class);
-            ArrayList<Flight> flights = flightMapper.selectFlightByAirline(id);
-            return flights;
+            return flightMapper.selectFlightByAirline(id);
         }
     }
 
@@ -38,8 +33,7 @@ public class FlightServiceMyBatis implements IFlightService {
     public ArrayList<Flight> getFlightBySourceAirport(int id) {
         try (SqlSession session = SessionUtil.openSession()) {
             flightMapper = session.getMapper(FlightMapper.class);
-            ArrayList<Flight> flights = flightMapper.selectFlightBySourceAirport(id);
-            return flights;
+            return flightMapper.selectFlightBySourceAirport(id);
         }
     }
 
@@ -47,8 +41,7 @@ public class FlightServiceMyBatis implements IFlightService {
     public ArrayList<Flight> getFlightByDestinationAirport(int id) {
         try (SqlSession session = SessionUtil.openSession()) {
             flightMapper = session.getMapper(FlightMapper.class);
-            ArrayList<Flight> flights = flightMapper.selectFlightByDestinationAirport(id);
-            return flights;
+            return flightMapper.selectFlightByDestinationAirport(id);
         }
     }
 
@@ -56,8 +49,7 @@ public class FlightServiceMyBatis implements IFlightService {
     public ArrayList<Flight> getFlights() {
         try (SqlSession session = SessionUtil.openSession()) {
             flightMapper = session.getMapper(FlightMapper.class);
-            ArrayList<Flight> flights = flightMapper.selectFlights();
-            return flights;
+            return flightMapper.selectFlights();
         }
     }
 
