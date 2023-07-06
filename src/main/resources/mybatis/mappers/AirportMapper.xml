@@ -18,6 +18,13 @@
         where A.name = #{name}
     </select>
 
+    <select id="selectAirportByCity" parameterType="com.solvd.block3.mappers.CityMapper" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
+        select *
+        from airports A
+        join cities C on A.city_id = C.city_id
+        where C.name = #{name}
+    </select>
+
     <select id="selectAirports" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
         select *
         from airports A

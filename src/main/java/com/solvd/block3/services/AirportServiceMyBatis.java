@@ -33,6 +33,16 @@ public class AirportServiceMyBatis implements IAirportService {
         }
     }
 
+    public Airport getAirportByCity(City city)
+    {
+        try (SqlSession session = SessionUtil.openSession()) 
+        {
+            airportMapper = session.getMapper(AirportMapper.class);
+            Airport airport = airportMapper.selectAirportByCity(city);
+            return airport;
+        }
+    }
+
     @Override
     public ArrayList<Airport> getAirports() {
         try (SqlSession session = SessionUtil.openSession()) {

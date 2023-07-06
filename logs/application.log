@@ -13,3 +13,23 @@
 2023-07-04 15:50:35,998 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
 2023-07-04 15:50:40,489 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
 2023-07-04 15:50:43,117 [main] INFO  com.solvd.block3.business_logic.Main - u p
+2023-07-04 20:22:51,581 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-04 20:22:56,219 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.
+2023-07-04 20:23:07,977 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-04 20:23:14,756 [main] INFO  com.solvd.block3.business_logic.Main - Dubai Dubai
+2023-07-04 20:32:15,528 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-04 20:32:27,121 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-04 20:32:31,831 [main] INFO  com.solvd.block3.business_logic.Main - Sydney Dubai
+2023-07-04 20:40:24,128 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-04 20:40:35,676 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.
+2023-07-04 20:40:40,911 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.
+2023-07-04 20:40:52,981 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-04 20:40:58,613 [main] INFO  com.solvd.block3.business_logic.Main - City{cityId=5, name='Sydney', country=Country{countryId=5, name='Sydney'}} City{cityId=4, name='Dubai', country=Country{countryId=4, name='Dubai'}}
+2023-07-04 20:41:10,376 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-04 20:41:20,352 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-04 20:41:26,959 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.
+2023-07-04 20:41:30,112 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.
+2023-07-04 20:41:34,455 [main] INFO  com.solvd.block3.business_logic.Main - City{cityId=5, name='Sydney', country=Country{countryId=5, name='Sydney'}} City{cityId=4, name='Dubai', country=Country{countryId=4, name='Dubai'}}
+2023-07-05 21:29:21,240 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-05 21:29:28,739 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-05 21:29:36,828 [main] INFO  com.solvd.block3.business_logic.Main - Airport{airportId=5, name='Sydney Airport', city=City{cityId=5, name='Sydney Airport', country=Country{countryId=5, name='Sydney Airport'}}, latitude=-33.9461, longitude=151.1772}
