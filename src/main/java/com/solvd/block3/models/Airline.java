@@ -32,9 +32,7 @@ public class Airline {
 
     @Override
     public String toString() {
-        return "Airline{" +
-                "airlineId=" + airlineId +
-                ", name='" + name + '\'' +
-                '}';
+        return "Airline " + name + ":\n" +
+                "Id: " + airlineId;
     }
 }

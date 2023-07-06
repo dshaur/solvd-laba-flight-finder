@@ -1,11 +1,8 @@
 package com.solvd.block3.services;
 
 import com.solvd.block3.interfaces.IAirlineService;
-import com.solvd.block3.interfaces.IAirportService;
 import com.solvd.block3.mappers.AirlineMapper;
-import com.solvd.block3.mappers.AirportMapper;
 import com.solvd.block3.models.Airline;
-import com.solvd.block3.models.Airport;
 import com.solvd.block3.utilities.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -17,8 +14,7 @@ public class AirlineServiceMyBatis implements IAirlineService {
     public Airline getAirline(int id) {
         try (SqlSession session = SessionUtil.openSession()) {
             airlineMapper = session.getMapper(AirlineMapper.class);
-            Airline airline = airlineMapper.selectAirlineById(id);
-            return airline;
+            return airlineMapper.selectAirlineById(id);
         }
     }
 
@@ -26,8 +22,7 @@ public class AirlineServiceMyBatis implements IAirlineService {
     public Airline getAirlineByName(String name) {
         try (SqlSession session = SessionUtil.openSession()) {
             airlineMapper = session.getMapper(AirlineMapper.class);
-            Airline airline = airlineMapper.selectAirlineByName(name);
-            return airline;
+            return airlineMapper.selectAirlineByName(name);
         }
     }
 
@@ -35,8 +30,7 @@ public class AirlineServiceMyBatis implements IAirlineService {
     public ArrayList<Airline> getAirlines() {
         try (SqlSession session = SessionUtil.openSession()) {
             airlineMapper = session.getMapper(AirlineMapper.class);
-            ArrayList<Airline> airlines = airlineMapper.selectAirlines();
-            return airlines;
+            return airlineMapper.selectAirlines();
         }
     }
 
