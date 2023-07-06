@@ -5,16 +5,18 @@
 <mapper namespace="com.solvd.block3.mappers.AirportMapper">
 
     <select id="selectAirportById" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
-        select *
+        select A.airport_id, A.name as airport_name, A.latitude, A.longitude, C.city_id, C.name as city_name, CO.country_id, CO.name as country_name
         from airports A
         join cities C on A.city_id = C.city_id
+        join countries CO on C.city_id = CO.country_id
         where A.airport_id = #{id}
     </select>
 
     <select id="selectAirportByName" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
-        select *
+        select A.airport_id, A.name as airport_name, A.latitude, A.longitude, C.city_id, C.name as city_name, CO.country_id, CO.name as country_name
         from airports A
         join cities C on A.city_id = C.city_id
+        join countries CO on C.city_id = CO.country_id
         where A.name = #{name}
     </select>
 
@@ -26,9 +28,10 @@
     </select>
 
     <select id="selectAirports" resultMap="com.solvd.block3.mappers.AirportMapper.airportResultMap">
-        select *
+        select A.airport_id, A.name as airport_name, A.latitude, A.longitude, C.city_id, C.name as city_name, CO.country_id, CO.name as country_name
         from airports A
         join cities C on A.city_id = C.city_id
+        join countries CO on C.city_id = CO.country_id
     </select>
 
     <insert id="insertAirport">
@@ -51,9 +54,25 @@
 
     <resultMap id="airportResultMap" type="com.solvd.block3.models.Airport" autoMapping="false">
         <id property="airportId" column="airport_id"/>
-        <result property="name" column="name"/>
+        <result property="name" column="airport_name"/>
         <result property="latitude" column="latitude"/>
         <result property="longitude" column="longitude"/>
         <association property="city" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap"></association>
+    </resultMap>
+
+    <resultMap id="sourceAirportResultMap" type="com.solvd.block3.models.Airport" autoMapping="false">
+        <id property="airportId" column="source_airport_id"/>
+        <result property="name" column="source_airport_name"/>
+        <result property="latitude" column="source_lat"/>
+        <result property="longitude" column="source_long"/>
+        <association property="city" resultMap="com.solvd.block3.mappers.CityMapper.sourceCityResultMap"></association>
+    </resultMap>
+
+    <resultMap id="destAirportResultMap" type="com.solvd.block3.models.Airport" autoMapping="false">
+        <id property="airportId" column="dest_airport_id"/>
+        <result property="name" column="dest_airport_name"/>
+        <result property="latitude" column="dest_lat"/>
+        <result property="longitude" column="dest_long"/>
+        <association property="city" resultMap="com.solvd.block3.mappers.CityMapper.destCityResultMap"></association>
     </resultMap>
 </mapper>

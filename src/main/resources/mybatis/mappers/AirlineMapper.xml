@@ -38,6 +38,6 @@
 
     <resultMap id="airlineResultMap" type="com.solvd.block3.models.Airline" autoMapping="false">
         <id property="airlineId" column="airline_id"/>
-        <result property="name" column="name"/>
+        <result property="name" column="airline_name"/>
     </resultMap>
 </mapper>
