@@ -1,11 +1,8 @@
 package com.solvd.block3.services;
 
 import com.solvd.block3.interfaces.ICityService;
-import com.solvd.block3.interfaces.ICountryService;
 import com.solvd.block3.mappers.CityMapper;
-import com.solvd.block3.mappers.CountryMapper;
 import com.solvd.block3.models.City;
-import com.solvd.block3.models.Country;
 import com.solvd.block3.utilities.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -20,8 +17,7 @@ public class CityServiceMyBatis implements ICityService {
     public City getCity(int id) {
         try (SqlSession session = SessionUtil.openSession()) {
             cityMapper = session.getMapper(CityMapper.class);
-            City city = cityMapper.selectCityById(id);
-            return city;
+            return cityMapper.selectCityById(id);
         }
     }
 
@@ -29,8 +25,7 @@ public class CityServiceMyBatis implements ICityService {
     public City getCityByName(String name) {
         try (SqlSession session = SessionUtil.openSession()) {
             cityMapper = session.getMapper(CityMapper.class);
-            City city = cityMapper.selectCityByName(name);
-            return city;
+            return cityMapper.selectCityByName(name);
         }
     }
 
@@ -38,8 +33,7 @@ public class CityServiceMyBatis implements ICityService {
     public ArrayList<City> getCities() {
         try (SqlSession session = SessionUtil.openSession()) {
             cityMapper = session.getMapper(CityMapper.class);
-            ArrayList<City> cities = cityMapper.selectCities();
-            return cities;
+            return cityMapper.selectCities();
         }
     }
 
