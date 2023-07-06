@@ -1,0 +1,36 @@
+{
+  "flightId" : 42,
+  "airline" : {
+    "airlineId" : 3,
+    "name" : "British Airways"
+  },
+  "sourceAirport" : {
+    "airportId" : 3,
+    "name" : "Heathrow Airport",
+    "city" : {
+      "cityId" : 3,
+      "name" : "London",
+      "country" : {
+        "countryId" : 3,
+        "name" : "United Kingdom"
+      }
+    },
+    "latitude" : 51.47,
+    "longitude" : -0.4543
+  },
+  "destinationAirport" : {
+    "airportId" : 5,
+    "name" : "Sydney Airport",
+    "city" : {
+      "cityId" : 5,
+      "name" : "Sydney",
+      "country" : {
+        "countryId" : 5,
+        "name" : "Australia"
+      }
+    },
+    "latitude" : -33.9461,
+    "longitude" : 151.1772
+  },
+  "price" : 1777.02
+}

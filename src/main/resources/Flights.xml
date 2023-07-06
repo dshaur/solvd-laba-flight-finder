@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flight>
+    <airline>
+        <airlineId>3</airlineId>
+        <name>British Airways</name>
+    </airline>
+    <destinationAirport>
+        <airportId>5</airportId>
+        <city>
+            <cityId>5</cityId>
+            <country>
+                <countryId>5</countryId>
+                <name>Australia</name>
+            </country>
+            <name>Sydney</name>
+        </city>
+        <latitude>-33.9461</latitude>
+        <longitude>151.1772</longitude>
+        <name>Sydney Airport</name>
+    </destinationAirport>
+    <flightId>42</flightId>
+    <price>1777.02</price>
+    <sourceAirport>
+        <airportId>3</airportId>
+        <city>
+            <cityId>3</cityId>
+            <country>
+                <countryId>3</countryId>
+                <name>United Kingdom</name>
+            </country>
+            <name>London</name>
+        </city>
+        <latitude>51.47</latitude>
+        <longitude>-0.4543</longitude>
+        <name>Heathrow Airport</name>
+    </sourceAirport>
+</flight>

@@ -33,3 +33,890 @@
 2023-07-05 21:29:21,240 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
 2023-07-05 21:29:28,739 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
 2023-07-05 21:29:36,828 [main] INFO  com.solvd.block3.business_logic.Main - Airport{airportId=5, name='Sydney Airport', city=City{cityId=5, name='Sydney Airport', country=Country{countryId=5, name='Sydney Airport'}}, latitude=-33.9461, longitude=151.1772}
+2023-07-06 09:58:19,619 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 09:58:26,301 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 09:58:36,435 [main] INFO  com.solvd.block3.business_logic.Main - Airport null:
+Id: 5
+City:
+City null:
+Id: 5
+Country:
+Country null:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+2023-07-06 09:59:26,365 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 09:59:33,063 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 09:59:40,948 [main] INFO  com.solvd.block3.business_logic.Main - Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+2023-07-06 10:16:29,977 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:16:35,946 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:16:40,964 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:16:44,558 [main] ERROR com.solvd.block3.ui.UiUtils - Invalid input.
+2023-07-06 10:16:44,559 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:16:47,303 [main] ERROR com.solvd.block3.ui.UiUtils - Invalid input.
+2023-07-06 10:16:47,303 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:16:50,718 [main] INFO  com.solvd.block3.business_logic.Main - 0
+2023-07-06 10:16:55,814 [main] INFO  com.solvd.block3.business_logic.Main - Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+2023-07-06 10:25:58,225 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:26:06,936 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:26:11,542 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:26:18,631 [main] INFO  com.solvd.block3.business_logic.Main - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:26:18,632 [main] INFO  com.solvd.block3.business_logic.Main - Here is a list of possible flights.
+2023-07-06 10:28:01,122 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:28:10,021 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:28:15,614 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:28:23,436 [main] INFO  com.solvd.block3.business_logic.Main - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:28:23,438 [main] INFO  com.solvd.block3.business_logic.Main - Here is a list of possible flights.
+2023-07-06 10:28:46,466 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:28:53,136 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:28:57,850 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:29:05,427 [main] INFO  com.solvd.block3.business_logic.Main - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:29:05,428 [main] INFO  com.solvd.block3.business_logic.Main - Here is a list of possible flights.
+2023-07-06 10:29:45,414 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:29:54,060 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:29:57,748 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:30:04,099 [main] INFO  com.solvd.block3.business_logic.Main - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:30:04,100 [main] INFO  com.solvd.block3.business_logic.Main - Here is a list of possible flights.
+2023-07-06 10:30:06,762 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 77
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Incheon International Airport:
+Id: 1
+City:
+City Seoul:
+Id: 1
+Country:
+Country South Korea:
+Id: 1
+
+
+Latitude: 37.4602
+Longitude: 126.4407
+
+Price: 909.22
+2023-07-06 10:30:06,770 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 78
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Denver International Airport:
+Id: 2
+City:
+City Denver:
+Id: 2
+Country:
+Country United States:
+Id: 2
+
+
+Latitude: 39.8561
+Longitude: -104.6737
+
+Price: 1419.34
+2023-07-06 10:30:06,775 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 79
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Heathrow Airport:
+Id: 3
+City:
+City London:
+Id: 3
+Country:
+Country United Kingdom:
+Id: 3
+
+
+Latitude: 51.47
+Longitude: -0.4543
+
+Price: 1777.02
+2023-07-06 10:30:06,780 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 80
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Dubai International Airport:
+Id: 4
+City:
+City Dubai:
+Id: 4
+Country:
+Country United Arab Emirates:
+Id: 4
+
+
+Latitude: 25.2522
+Longitude: 55.3644
+
+Price: 1279.39
+2023-07-06 10:30:06,785 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 81
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Jorge Chávez International Airport:
+Id: 6
+City:
+City Lima:
+Id: 6
+Country:
+Country Peru:
+Id: 6
+
+
+Latitude: -12.0219
+Longitude: -77.1143
+
+Price: 1354.38
+2023-07-06 10:30:06,789 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 82
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Charles de Gaulle Airport:
+Id: 7
+City:
+City Paris:
+Id: 7
+Country:
+Country France:
+Id: 7
+
+
+Latitude: 49.0097
+Longitude: 2.5479
+
+Price: 1769.46
+2023-07-06 10:30:06,793 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 83
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Berlin Tegel Airport:
+Id: 8
+City:
+City Berlin:
+Id: 8
+Country:
+Country Germany:
+Id: 8
+
+
+Latitude: 52.5597
+Longitude: 13.2877
+
+Price: 1685.5
+2023-07-06 10:30:06,798 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 84
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Beijing Capital International Airport:
+Id: 9
+City:
+City Beijing:
+Id: 9
+Country:
+Country China:
+Id: 9
+
+
+Latitude: 40.0799
+Longitude: 116.6031
+
+Price: 971.38
+2023-07-06 10:30:06,803 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 85
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Guarulhos International Airport:
+Id: 10
+City:
+City São Paulo:
+Id: 10
+Country:
+Country Brazil:
+Id: 10
+
+
+Latitude: -23.4356
+Longitude: -46.4731
+
+Price: 1411.7
+2023-07-06 10:30:06,809 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 86
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Toronto Pearson International Airport:
+Id: 11
+City:
+City Toronto:
+Id: 11
+Country:
+Country Canada:
+Id: 11
+
+
+Latitude: 43.6777
+Longitude: -79.6248
+
+Price: 1630.52
+2023-07-06 10:30:06,814 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 87
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Chhatrapati Shivaji Maharaj International Airport:
+Id: 12
+City:
+City Mumbai:
+Id: 12
+Country:
+Country India:
+Id: 12
+
+
+Latitude: 19.0887
+Longitude: 72.8679
+
+Price: 1090.9
+2023-07-06 10:30:06,819 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 88
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Sheremetyevo International Airport:
+Id: 13
+City:
+City Moscow:
+Id: 13
+Country:
+Country Russia:
+Id: 13
+
+
+Latitude: 55.9726
+Longitude: 37.4144
+
+Price: 1526.43
+2023-07-06 10:30:06,823 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 89
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Amsterdam Airport Schiphol:
+Id: 14
+City:
+City Amsterdam:
+Id: 14
+Country:
+Country Netherlands:
+Id: 14
+
+
+Latitude: 52.3105
+Longitude: 4.7683
+
+Price: 1740.83
+2023-07-06 10:30:06,827 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 90
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Benito Juarez International Airport:
+Id: 15
+City:
+City Mexico City:
+Id: 15
+Country:
+Country Mexico:
+Id: 15
+
+
+Latitude: 19.4363
+Longitude: -99.072
+
+Price: 1373.26
+2023-07-06 10:30:06,832 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 91
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Leonardo da Vinci–Fiumicino Airport:
+Id: 16
+City:
+City Rome:
+Id: 16
+Country:
+Country Italy:
+Id: 16
+
+
+Latitude: 41.8003
+Longitude: 12.2389
+
+Price: 1709.35
+2023-07-06 10:30:06,839 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 92
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Adolfo Suárez Madrid–Barajas Airport:
+Id: 17
+City:
+City Madrid:
+Id: 17
+Country:
+Country Spain:
+Id: 17
+
+
+Latitude: 40.471
+Longitude: -3.5626
+
+Price: 1842.29
+2023-07-06 10:30:06,851 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 93
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Istanbul Atatürk Airport:
+Id: 18
+City:
+City Istanbul:
+Id: 18
+Country:
+Country Turkey:
+Id: 18
+
+
+Latitude: 40.9767
+Longitude: 28.815
+
+Price: 1571.03
+2023-07-06 10:30:06,856 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 94
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Tokyo Haneda Airport:
+Id: 19
+City:
+City Tokyo:
+Id: 19
+Country:
+Country Japan:
+Id: 19
+
+
+Latitude: 35.5494
+Longitude: 139.7798
+
+Price: 856.78
+2023-07-06 10:30:06,861 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 95
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Cape Town International Airport:
+Id: 20
+City:
+City Cape Town:
+Id: 20
+Country:
+Country South Africa:
+Id: 20
+
+
+Latitude: -33.9715
+Longitude: 18.6021
+
+Price: 1173.89
+2023-07-06 10:33:29,131 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:33:35,554 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:33:38,527 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:33:47,329 [main] INFO  com.solvd.block3.business_logic.Main - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:33:47,330 [main] INFO  com.solvd.block3.business_logic.Main - Here is a list of possible flights.
+2023-07-06 10:33:49,790 [main] INFO  com.solvd.block3.business_logic.Main - Airport Dubai International Airport:
+Id: 4
+City:
+City Dubai:
+Id: 4
+Country:
+Country United Arab Emirates:
+Id: 4
+
+
+Latitude: 25.2522
+Longitude: 55.3644
+
+2023-07-06 10:33:49,793 [main] INFO  com.solvd.block3.business_logic.Main - Airport Dubai International Airport:
+Id: 4
+City:
+City Dubai:
+Id: 4
+Country:
+Country United Arab Emirates:
+Id: 4
+
+
+Latitude: 25.2522
+Longitude: 55.3644
+
+2023-07-06 10:39:07,052 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:39:13,068 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:39:15,633 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:39:20,548 [main] INFO  com.solvd.block3.business_logic.Main - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:39:20,549 [main] INFO  com.solvd.block3.business_logic.Main - Here is a list of possible flights.
+2023-07-06 10:39:23,005 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 80
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Dubai International Airport:
+Id: 4
+City:
+City Dubai:
+Id: 4
+Country:
+Country United Arab Emirates:
+Id: 4
+
+
+Latitude: 25.2522
+Longitude: 55.3644
+
+Price: 1279.39
+2023-07-06 10:48:57,660 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:54:20,560 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:54:29,525 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:54:31,912 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:54:31,913 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:54:31,913 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of possible flights.
+2023-07-06 10:54:39,539 [main] ERROR com.solvd.block3.xml.XmlMaker - null
+2023-07-06 10:56:13,807 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:56:21,481 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:56:24,039 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:56:24,040 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:56:24,041 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of possible flights.
+2023-07-06 10:56:31,656 [main] ERROR com.solvd.block3.xml.XmlMaker - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: unable to marshal type "com.solvd.block3.models.Flight" as an element because it is missing an @XmlRootElement annotation]
+2023-07-06 10:58:27,869 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 10:58:34,498 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 10:58:36,958 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 10:58:36,959 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 10:58:36,960 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of possible flights.
+2023-07-06 14:35:19,511 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 14:35:25,185 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 14:35:27,591 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 14:35:27,591 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-06 14:35:35,067 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between Sydney and Dubai is a direct route.
+2023-07-06 14:35:35,069 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of possible flights.
+2023-07-06 14:35:35,073 [main] INFO  com.solvd.block3.ui.UiUtils - Flight:
+Id: 80
+Airline:
+Airline Qantas Airways:
+Id: 5
+Source Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Destination Airport:
+Airport Dubai International Airport:
+Id: 4
+City:
+City Dubai:
+Id: 4
+Country:
+Country United Arab Emirates:
+Id: 4
+
+
+Latitude: 25.2522
+Longitude: 55.3644
+
+Price: 1279.39
+2023-07-06 14:39:31,726 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-06 14:39:37,449 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-06 14:39:40,009 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-06 14:39:40,011 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-06 14:39:47,383 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between London and Sydney is a direct route.
+2023-07-06 14:39:47,383 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of possible flights.
+2023-07-06 14:39:47,385 [main] INFO  com.solvd.block3.ui.UiUtils - Flight:
+Id: 42
+Airline:
+Airline British Airways:
+Id: 3
+Source Airport:
+Airport Heathrow Airport:
+Id: 3
+City:
+City London:
+Id: 3
+Country:
+Country United Kingdom:
+Id: 3
+
+
+Latitude: 51.47
+Longitude: -0.4543
+
+Destination Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Price: 1777.02
