@@ -5,21 +5,21 @@
 <mapper namespace="com.solvd.block3.mappers.CityMapper">
 
     <select id="selectCityById" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
-        select *
+        select C.city_id, C.name as city_name, CO.country_id, CO.name
         from cities C
         join countries CO on C.country_id = CO.country_id
         where C.city_id = #{id}
     </select>
 
     <select id="selectCityByName" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
-        select *
+        select C.city_id, C.name as city_name, CO.country_id, CO.name
         from cities C
         join countries CO on C.country_id = CO.country_id
         where C.name = #{name}
     </select>
 
     <select id="selectCities" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
-        select *
+        select C.city_id, C.name as city_name, CO.country_id, CO.name
         from cities C
         join countries CO on C.country_id = CO.country_id
     </select>
@@ -42,7 +42,19 @@
 
     <resultMap id="cityResultMap" type="com.solvd.block3.models.City" autoMapping="false">
         <id property="cityId" column="city_id"/>
-        <result property="name" column="name"/>
+        <result property="name" column="city_name"/>
         <association property="country" resultMap="com.solvd.block3.mappers.CountryMapper.countryResultMap"></association>
+    </resultMap>
+
+    <resultMap id="sourceCityResultMap" type="com.solvd.block3.models.City" autoMapping="false">
+        <id property="cityId" column="source_city_id"/>
+        <result property="name" column="source_city_name"/>
+        <association property="country" resultMap="com.solvd.block3.mappers.CountryMapper.sourceCountryResultMap"></association>
+    </resultMap>
+
+    <resultMap id="destCityResultMap" type="com.solvd.block3.models.City" autoMapping="false">
+        <id property="cityId" column="dest_city_id"/>
+        <result property="name" column="dest_city_name"/>
+        <association property="country" resultMap="com.solvd.block3.mappers.CountryMapper.destCountryResultMap"></association>
     </resultMap>
 </mapper>

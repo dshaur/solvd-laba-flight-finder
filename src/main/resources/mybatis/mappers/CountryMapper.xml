@@ -38,6 +38,16 @@
 
     <resultMap id="countryResultMap" type="com.solvd.block3.models.Country" autoMapping="false">
         <id property="countryId" column="country_id"/>
-        <result property="name" column="name"/>
+        <result property="name" column="country_name"/>
+    </resultMap>
+
+    <resultMap id="sourceCountryResultMap" type="com.solvd.block3.models.Country" autoMapping="false">
+        <id property="countryId" column="source_country_id"/>
+        <result property="name" column="source_country_name"/>
+    </resultMap>
+
+    <resultMap id="destCountryResultMap" type="com.solvd.block3.models.Country" autoMapping="false">
+        <id property="countryId" column="dest_country_id"/>
+        <result property="name" column="dest_country_name"/>
     </resultMap>
 </mapper>
