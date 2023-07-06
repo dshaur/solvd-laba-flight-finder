@@ -32,9 +32,7 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country{" +
-                "countryId=" + countryId +
-                ", name='" + name + '\'' +
-                '}';
+        return "Country " + name + ":\n" +
+                "Id: " + countryId + "\n";
     }
 }
