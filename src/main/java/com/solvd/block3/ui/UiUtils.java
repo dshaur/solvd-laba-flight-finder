@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import com.solvd.block3.json.JsonMaker;
 import com.solvd.block3.models.Airport;
 import com.solvd.block3.models.City;
@@ -77,10 +76,16 @@ public class UiUtils
         });
 
         LOGGER.info("The shortest route between " + source.getName() + " and " + dest.getName() + " is a direct route.");
-        LOGGER.info("Here is a list of possible flights.");
+        LOGGER.info("Here is a list of directions.");
         commonFlights.forEach(flight -> 
         {   
-            LOGGER.info(flight);
+            LOGGER.info("Start at " + 
+            flight.getSourceAirport().getName() + 
+            " and use " + 
+            flight.getAirline().getName() +
+            " to get to " +
+            flight.getDestinationAirport().getName());
+            
             XmlMaker.makeXml(XML_PATH, flight);
             JsonMaker.makeJson(JSON_PATH, flight);
         });
