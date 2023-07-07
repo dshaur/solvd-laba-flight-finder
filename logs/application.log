@@ -998,3 +998,12 @@ Price: 824.74
 2023-07-06 15:15:56,447 [main] ERROR UiUtils.class - City doesn't exist in database. Please try again.
 2023-07-06 15:23:07,678 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
 2023-07-06 15:23:12,161 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.
+2023-07-07 16:00:23,094 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-07 16:00:28,996 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-07 16:00:34,751 [main] ERROR com.solvd.block3.ui.UiUtils - City doesn't exist in database. Please try again.
+2023-07-07 16:00:39,442 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-07 16:00:42,294 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-07 16:00:49,887 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between London and Denver is a direct route.
+2023-07-07 16:00:49,888 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of directions.
+2023-07-07 16:00:49,889 [main] INFO  com.solvd.block3.ui.UiUtils - Go to Heathrow Airport and use British Airways to get to Denver International Airport
+2023-07-07 16:00:50,307 [main] INFO  com.solvd.block3.ui.UiUtils - Arrived at Denver

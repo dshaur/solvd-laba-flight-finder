@@ -24,5 +24,10 @@ public class Main
         {
             UiUtils.makeShortestRoute(origin, destination);
         }
+
+        else
+        {
+            UiUtils.makeCheapestRoute(origin, destination);
+        }
     }
 }

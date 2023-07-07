@@ -1,6 +1,7 @@
 package com.solvd.block3.ui;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -76,18 +77,31 @@ public class UiUtils
         });
 
         LOGGER.info("The shortest route between " + source.getName() + " and " + dest.getName() + " is a direct route.");
+
+        printDirections(commonFlights);
+    }
+
+    public static void makeCheapestRoute(City source, City dest)
+    {
+        //Call alg here
+    }
+
+    private static void printDirections(List<Flight> flights)
+    {
         LOGGER.info("Here is a list of directions.");
-        commonFlights.forEach(flight -> 
+        flights.forEach(flight -> 
         {   
-            LOGGER.info("Start at " + 
+            LOGGER.info("Go to " + 
             flight.getSourceAirport().getName() + 
             " and use " + 
             flight.getAirline().getName() +
             " to get to " +
             flight.getDestinationAirport().getName());
-            
+
             XmlMaker.makeXml(XML_PATH, flight);
             JsonMaker.makeJson(JSON_PATH, flight);
         });
+
+        LOGGER.info("Arrived at " + flights.get(flights.size() - 1).getDestinationAirport().getCity().getName());
     }
 }
