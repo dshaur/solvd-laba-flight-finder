@@ -1007,3 +1007,11 @@ Price: 824.74
 2023-07-07 16:00:49,888 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of directions.
 2023-07-07 16:00:49,889 [main] INFO  com.solvd.block3.ui.UiUtils - Go to Heathrow Airport and use British Airways to get to Denver International Airport
 2023-07-07 16:00:50,307 [main] INFO  com.solvd.block3.ui.UiUtils - Arrived at Denver
+2023-07-07 16:03:39,385 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-07 16:03:47,346 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-07 16:03:54,416 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 'c' for cheapest route, 's' for shortest route.
+2023-07-07 16:03:59,303 [main] INFO  com.solvd.block3.ui.UiUtils - Getting data...
+2023-07-07 16:04:06,703 [main] INFO  com.solvd.block3.ui.UiUtils - The shortest route between Denver and Sydney is a direct route.
+2023-07-07 16:04:06,703 [main] INFO  com.solvd.block3.ui.UiUtils - Here is a list of directions.
+2023-07-07 16:04:06,705 [main] INFO  com.solvd.block3.ui.UiUtils - Go to Denver International Airport and use United Airlines to get to Sydney Airport
+2023-07-07 16:04:07,065 [main] INFO  com.solvd.block3.ui.UiUtils - Arrived at Sydney

@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <flight>
     <airline>
-        <airlineId>3</airlineId>
-        <name>British Airways</name>
+        <airlineId>2</airlineId>
+        <name>United Airlines</name>
     </airline>
     <destinationAirport>
+        <airportId>5</airportId>
+        <city>
+            <cityId>5</cityId>
+            <country>
+                <countryId>5</countryId>
+                <name>Australia</name>
+            </country>
+            <name>Sydney</name>
+        </city>
+        <latitude>-33.9461</latitude>
+        <longitude>151.1772</longitude>
+        <name>Sydney Airport</name>
+    </destinationAirport>
+    <flightId>23</flightId>
+    <price>1419.34</price>
+    <sourceAirport>
         <airportId>2</airportId>
         <city>
             <cityId>2</cityId>
@@ -17,21 +33,5 @@
         <latitude>39.8561</latitude>
         <longitude>-104.6737</longitude>
         <name>Denver International Airport</name>
-    </destinationAirport>
-    <flightId>40</flightId>
-    <price>824.74</price>
-    <sourceAirport>
-        <airportId>3</airportId>
-        <city>
-            <cityId>3</cityId>
-            <country>
-                <countryId>3</countryId>
-                <name>United Kingdom</name>
-            </country>
-            <name>London</name>
-        </city>
-        <latitude>51.47</latitude>
-        <longitude>-0.4543</longitude>
-        <name>Heathrow Airport</name>
     </sourceAirport>
 </flight>
