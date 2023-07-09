@@ -6,11 +6,13 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class UiUtils {
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final Logger LOGGER = LogManager.getLogger(UiUtils.class);
     private static final Map<String, String> cityMap = createCityMap();
+    private static final Pattern numberPattern = Pattern.compile("\\d+");
 
     private static Map<String, String> createCityMap() {
         Map<String, String> cityMap = new HashMap<>();
@@ -43,13 +45,35 @@ public class UiUtils {
             LOGGER.info(entry.getKey() + ": " + entry.getValue());
         }
 
-        String ret = SCANNER.nextLine();
-        while (!validateCity(ret)) {
-            LOGGER.error("City doesn't exist in the database. Please try again.");
-            ret = SCANNER.nextLine();
+        String input = SCANNER.nextLine().trim();
+        String cityId = null;
+        if (numberPattern.matcher(input).matches()) {
+            cityId = input;
+        } else {
+            for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+                if (entry.getValue().equalsIgnoreCase(input)) {
+                    cityId = entry.getKey();
+                    break;
+                }
+            }
         }
 
-        return cityMap.get(ret);
+        while (cityId == null || !validateCity(cityId)) {
+            LOGGER.error("Invalid input. Please enter a valid city ID or name.");
+            input = SCANNER.nextLine().trim();
+            if (numberPattern.matcher(input).matches()) {
+                cityId = input;
+            } else {
+                for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+                    if (entry.getValue().equalsIgnoreCase(input)) {
+                        cityId = entry.getKey();
+                        break;
+                    }
+                }
+            }
+        }
+
+        return cityMap.get(cityId);
     }
 
     public static boolean validateCity(String cityId) {
