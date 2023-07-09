@@ -59,7 +59,7 @@ public class UiUtils {
         }
 
         while (cityId == null || !validateCity(cityId)) {
-            LOGGER.error("Invalid input. Please enter a valid city ID or name.");
+            LOGGER.error("Invalid input. Please enter a valid option or the city name.");
             input = SCANNER.nextLine().trim();
             if (numberPattern.matcher(input).matches()) {
                 cityId = input;
