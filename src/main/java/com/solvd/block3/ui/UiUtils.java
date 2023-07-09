@@ -3,7 +3,7 @@ package com.solvd.block3.ui;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -15,7 +15,7 @@ public class UiUtils {
     private static final Pattern numberPattern = Pattern.compile("\\d+");
 
     private static Map<String, String> createCityMap() {
-        Map<String, String> cityMap = new HashMap<>();
+        Map<String, String> cityMap = new LinkedHashMap<>();
         cityMap.put("1", "Seoul");
         cityMap.put("2", "Denver");
         cityMap.put("3", "London");
@@ -59,7 +59,7 @@ public class UiUtils {
         }
 
         while (cityId == null || !validateCity(cityId)) {
-            LOGGER.error("Invalid input. Please enter a valid option or the city name.");
+            LOGGER.error("Invalid input. Please enter a valid city ID or name.");
             input = SCANNER.nextLine().trim();
             if (numberPattern.matcher(input).matches()) {
                 cityId = input;
