@@ -3,6 +3,7 @@ package com.solvd.block3.interfaces;
 import com.solvd.block3.models.Flight;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface IFlightService {
     Flight getFlight(int id);
@@ -20,4 +21,6 @@ public interface IFlightService {
     void updateFlight(Flight flight);
 
     void deleteFlight(Flight flight);
+
+    List<Integer> findShortestPath(int sourceAirportId, int destinationAirportId);
 }
