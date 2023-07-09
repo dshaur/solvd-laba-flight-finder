@@ -9,7 +9,6 @@ public class Main
 {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
-    
     public static void main(String[] args) 
     {
         LOGGER.info("Welcome to the flight finder. Please input an origin city.");
@@ -18,7 +17,14 @@ public class Main
         LOGGER.info("Now input a destination.");
         City destination = UiUtils.makeCity();
 
+        if (origin.equals(destination))
+        {
+            LOGGER.info("Source and destination cities are the same. No need to find a route.");
+            System.exit(0);
+        }
+
         String mode = UiUtils.getMode();
+
 
         if (mode.equalsIgnoreCase("s"))
         {

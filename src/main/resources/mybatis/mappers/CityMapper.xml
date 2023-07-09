@@ -5,21 +5,21 @@
 <mapper namespace="com.solvd.block3.mappers.CityMapper">
 
     <select id="selectCityById" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
-        select C.city_id, C.name as city_name, CO.country_id, CO.name
+        select C.city_id, C.name as city_name, CO.country_id, CO.name as country_name
         from cities C
         join countries CO on C.country_id = CO.country_id
         where C.city_id = #{id}
     </select>
 
     <select id="selectCityByName" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
-        select C.city_id, C.name as city_name, CO.country_id, CO.name
+        select C.city_id, C.name as city_name, CO.country_id, CO.name as country_name
         from cities C
         join countries CO on C.country_id = CO.country_id
         where C.name = #{name}
     </select>
 
     <select id="selectCities" resultMap="com.solvd.block3.mappers.CityMapper.cityResultMap">
-        select C.city_id, C.name as city_name, CO.country_id, CO.name
+        select C.city_id, C.name as city_name, CO.country_id, CO.name as country_name
         from cities C
         join countries CO on C.country_id = CO.country_id
     </select>
