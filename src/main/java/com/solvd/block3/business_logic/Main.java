@@ -2,6 +2,7 @@ package com.solvd.block3.business_logic;
 
 import com.solvd.block3.ui.UiUtils;
 import com.solvd.block3.xml.XmlMaker;
+import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,9 +36,10 @@ public class Main {
         {
             LOGGER.info("The shortest path is a direct one. Getting info...");
             Flight shortest = UiUtils.findShortestFlight(origin, destination);
+            List<Flight> singleFlight = new ArrayList<Flight>();
+            singleFlight.add(shortest);
+            UiUtils.printFlightDirections(singleFlight);
 
-            LOGGER.info("Information about the flight:");
-            LOGGER.info(shortest);
             XmlMaker.makeXml(XML_PATH, shortest);
             JsonMaker.makeJson(JSON_PATH, shortest);
         }
@@ -47,13 +49,9 @@ public class Main {
             LOGGER.info("Finding cheapest path...");
             List<Flight> flightsOfCheapest = UiUtils.findCheapestPathFlights(origin, destination);
 
-            LOGGER.info("Flights to get to " + destination.getName() + " from " + origin.getName());
-            flightsOfCheapest.forEach(flight ->
-            {
-                LOGGER.info(flight);
-            });
-            FlightList list = new FlightList(flightsOfCheapest);
+            UiUtils.printFlightDirections(flightsOfCheapest);
 
+            FlightList list = new FlightList(flightsOfCheapest);
             XmlMaker.makeXml(XML_PATH, list);
             JsonMaker.makeJson(JSON_PATH, list);
         }

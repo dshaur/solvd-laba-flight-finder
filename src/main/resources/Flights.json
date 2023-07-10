@@ -1,143 +1,73 @@
 {
   "flights" : [ {
-    "flightId" : 321,
+    "flightId" : 33,
     "airline" : {
-      "airlineId" : 17,
-      "name" : "Iberia"
+      "airlineId" : 2,
+      "name" : "United Airlines"
     },
     "sourceAirport" : {
-      "airportId" : 17,
-      "name" : "Adolfo Suárez Madrid–Barajas Airport",
+      "airportId" : 2,
+      "name" : "Denver International Airport",
       "city" : {
-        "cityId" : 17,
-        "name" : "Madrid",
+        "cityId" : 2,
+        "name" : "Denver",
         "country" : {
-          "countryId" : 17,
-          "name" : "Spain"
+          "countryId" : 2,
+          "name" : "United States"
         }
       },
-      "latitude" : 40.471,
-      "longitude" : -3.5626
+      "latitude" : 39.8561,
+      "longitude" : -104.6737
     },
     "destinationAirport" : {
-      "airportId" : 18,
-      "name" : "Istanbul Atatürk Airport",
+      "airportId" : 15,
+      "name" : "Benito Juarez International Airport",
       "city" : {
-        "cityId" : 18,
-        "name" : "Istanbul",
+        "cityId" : 15,
+        "name" : "Mexico City",
         "country" : {
-          "countryId" : 18,
-          "name" : "Turkey"
+          "countryId" : 15,
+          "name" : "Mexico"
         }
       },
-      "latitude" : 40.9767,
-      "longitude" : 28.815
+      "latitude" : 19.4363,
+      "longitude" : -99.072
     },
-    "price" : 271.33
+    "price" : 466.58
   }, {
-    "flightId" : 335,
+    "flightId" : 272,
     "airline" : {
-      "airlineId" : 18,
-      "name" : "Turkish Airlines"
+      "airlineId" : 15,
+      "name" : "Aeroméxico"
     },
     "sourceAirport" : {
-      "airportId" : 18,
-      "name" : "Istanbul Atatürk Airport",
+      "airportId" : 15,
+      "name" : "Benito Juarez International Airport",
       "city" : {
-        "cityId" : 18,
-        "name" : "Istanbul",
+        "cityId" : 15,
+        "name" : "Mexico City",
         "country" : {
-          "countryId" : 18,
-          "name" : "Turkey"
+          "countryId" : 15,
+          "name" : "Mexico"
         }
       },
-      "latitude" : 40.9767,
-      "longitude" : 28.815
+      "latitude" : 19.4363,
+      "longitude" : -99.072
     },
     "destinationAirport" : {
-      "airportId" : 12,
-      "name" : "Chhatrapati Shivaji Maharaj International Airport",
+      "airportId" : 6,
+      "name" : "Jorge Chávez International Airport",
       "city" : {
-        "cityId" : 12,
-        "name" : "Mumbai",
+        "cityId" : 6,
+        "name" : "Lima",
         "country" : {
-          "countryId" : 12,
-          "name" : "India"
+          "countryId" : 6,
+          "name" : "Peru"
         }
       },
-      "latitude" : 19.0887,
-      "longitude" : 72.8679
+      "latitude" : -12.0219,
+      "longitude" : -77.1143
     },
-    "price" : 481.99
-  }, {
-    "flightId" : 218,
-    "airline" : {
-      "airlineId" : 12,
-      "name" : "Air India"
-    },
-    "sourceAirport" : {
-      "airportId" : 12,
-      "name" : "Chhatrapati Shivaji Maharaj International Airport",
-      "city" : {
-        "cityId" : 12,
-        "name" : "Mumbai",
-        "country" : {
-          "countryId" : 12,
-          "name" : "India"
-        }
-      },
-      "latitude" : 19.0887,
-      "longitude" : 72.8679
-    },
-    "destinationAirport" : {
-      "airportId" : 9,
-      "name" : "Beijing Capital International Airport",
-      "city" : {
-        "cityId" : 9,
-        "name" : "Beijing",
-        "country" : {
-          "countryId" : 9,
-          "name" : "China"
-        }
-      },
-      "latitude" : 40.0799,
-      "longitude" : 116.6031
-    },
-    "price" : 476.59
-  }, {
-    "flightId" : 170,
-    "airline" : {
-      "airlineId" : 9,
-      "name" : "Air China"
-    },
-    "sourceAirport" : {
-      "airportId" : 9,
-      "name" : "Beijing Capital International Airport",
-      "city" : {
-        "cityId" : 9,
-        "name" : "Beijing",
-        "country" : {
-          "countryId" : 9,
-          "name" : "China"
-        }
-      },
-      "latitude" : 40.0799,
-      "longitude" : 116.6031
-    },
-    "destinationAirport" : {
-      "airportId" : 19,
-      "name" : "Tokyo Haneda Airport",
-      "city" : {
-        "cityId" : 19,
-        "name" : "Tokyo",
-        "country" : {
-          "countryId" : 19,
-          "name" : "Japan"
-        }
-      },
-      "latitude" : 35.5494,
-      "longitude" : 139.7798
-    },
-    "price" : 209.08
+    "price" : 849.0
   } ]
 }

@@ -147,4 +147,25 @@ public class UiUtils
         return ret;
     }
 
+    public static void printFlightDirections(List<Flight> flights)
+    {
+        double totalPrice = 0.0;
+        LOGGER.info("Directions:");
+        for (Flight flight : flights) 
+        {
+            LOGGER.info(
+                "Take flight " + 
+                flight.getAirline().getName() + 
+                " from " + 
+                flight.getSourceAirport().getName() +
+                " to " +
+                flight.getDestinationAirport().getName());
+
+            totalPrice += flight.getPrice(); 
+        }
+
+        LOGGER.info("Arrived at final destination.");
+        LOGGER.info("Total price: " + totalPrice);
+    }
+
 }
