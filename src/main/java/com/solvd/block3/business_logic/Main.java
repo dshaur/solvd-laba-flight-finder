@@ -28,7 +28,7 @@ public class Main {
             LOGGER.info("Cities are the same. Closing program.");
             System.exit(0);
         }
-        
+
         String mode = UiUtils.getMode();
 
         if (mode.equalsIgnoreCase("s"))
@@ -51,9 +51,11 @@ public class Main {
             flightsOfCheapest.forEach(flight ->
             {
                 LOGGER.info(flight);
-                XmlMaker.makeXml(XML_PATH, flight);
-                JsonMaker.makeJson(JSON_PATH, flight);
             });
+            FlightList list = new FlightList(flightsOfCheapest);
+
+            XmlMaker.makeXml(XML_PATH, list);
+            JsonMaker.makeJson(JSON_PATH, list);
         }
     }
 }

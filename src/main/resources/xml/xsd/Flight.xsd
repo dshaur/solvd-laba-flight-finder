@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:include schemaLocation="Airport.xsd"/>
+    <xs:element name="flight" type ="flight"/>
+        <xs:complexType name="flight">
+            <xs:sequence>
+                <xs:element name="flightId" type="xs:integer"/>
+                <xs:element name="airline">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="airlineId" type="xs:integer"/>
+                            <xs:element name="name" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="sourceAirport" type="airport"/>
+                <xs:element name="destinationAirport" type="airport"/>
+                <xs:element name="price" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+</xs:schema>
