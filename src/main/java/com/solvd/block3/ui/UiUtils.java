@@ -1,27 +1,21 @@
 package com.solvd.block3.ui;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.solvd.block3.json.JsonMaker;
-import com.solvd.block3.models.Airport;
 import com.solvd.block3.models.City;
 import com.solvd.block3.models.Flight;
 import com.solvd.block3.services.AirportServiceMyBatis;
 import com.solvd.block3.services.CityServiceMyBatis;
 import com.solvd.block3.services.FlightServiceMyBatis;
-import com.solvd.block3.xml.XmlMaker;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class UiUtils 
 {    
-    private static final String XML_PATH = "src/main/resources/Flights.xml";
-    private static final String JSON_PATH = "src/main/resources/Flights.json";
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final Logger LOGGER = LogManager.getLogger(UiUtils.class);
     private static final Map<String, String> CITY_MAP = createCityMap();
@@ -55,7 +49,7 @@ public class UiUtils
         return cityMap;
     }
 
-    public static String selectCity() {
+    public static City selectCity() {
         LOGGER.info("Available cities:");
         for (Map.Entry<String, String> entry : CITY_MAP.entrySet()) {
             LOGGER.info(entry.getKey() + ": " + entry.getValue());
@@ -89,7 +83,8 @@ public class UiUtils
             }
         }
 
-        return CITY_MAP.get(cityId);
+        String cityName = CITY_MAP.get(cityId);
+        return CITY_SERVICE.getCityByName(cityName);
     }
 
     public static boolean validateCity(String cityId) {
@@ -99,22 +94,55 @@ public class UiUtils
 
     public static String getMode()
     {
-        LOGGER.info("Enter 'c' for cheapest route, 's' for shortest route.");
-        String mode = SCANNER.nextLine();
-
-        while (true)
+        LOGGER.info("Enter 's' to get the shortest path or 'c' for the cheapest");
+        String mode = SCANNER.nextLine().trim();
+        while (!mode.equalsIgnoreCase("s") && !mode.equalsIgnoreCase("c"))
         {
-            if (mode.equalsIgnoreCase("c") || mode.equalsIgnoreCase("s"))
-            {
-                return mode;
-            }
+            LOGGER.info("Invalid input.");
+            LOGGER.info("Enter 's' to get the shortest path or 'c' for the cheapest");  
+            mode = SCANNER.nextLine().trim();
+        }
 
-            else
+        return mode;
+    }
+
+    public static Flight findShortestFlight(City source, City dest)
+    {
+        int sourceApId = AIRPORT_SERVICE.getAirportByCity(source).getAirportId();
+        int destApId = AIRPORT_SERVICE.getAirportByCity(dest).getAirportId();
+
+        List<Integer> airportIds = new ArrayList<Integer>();
+        airportIds.add(sourceApId);
+        airportIds.add(destApId);
+
+        return findFlights(airportIds).get(0);       
+    }
+
+    public static List<Flight> findCheapestPathFlights(City source, City dest)
+    {
+        int sourceApId = AIRPORT_SERVICE.getAirportByCity(source).getAirportId();
+        int destApId = AIRPORT_SERVICE.getAirportByCity(dest).getAirportId();
+
+        List<Integer> airportIds = FLIGHT_SERVICE.findShortestPath(sourceApId, destApId);
+
+        return findFlights(airportIds);
+    }
+
+    private static List<Flight> findFlights(List<Integer> airportIds)
+    {
+        List<Flight> ret = new ArrayList<Flight>();
+        for (int i = 0; i < airportIds.size(); i += 2)
+        {
+            ArrayList<Flight> sourceFlights = FLIGHT_SERVICE.getFlightBySourceAirport(airportIds.get(i));
+            for(Flight flight : sourceFlights)
             {
-                LOGGER.error("Invalid input.");
-                LOGGER.info("Enter 'c' for cheapest route, 's' for shortest route.");
-                mode = SCANNER.nextLine();
+                if (flight.getDestinationAirport().getAirportId() == airportIds.get(i + 1))
+                {
+                    ret.add(flight);
+                }
             }
         }
+
+        return ret;
     }
 }

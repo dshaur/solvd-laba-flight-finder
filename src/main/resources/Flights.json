@@ -1,10 +1,24 @@
 {
-  "flightId" : 23,
+  "flightId" : 287,
   "airline" : {
-    "airlineId" : 2,
-    "name" : "United Airlines"
+    "airlineId" : 16,
+    "name" : "Alitalia"
   },
   "sourceAirport" : {
+    "airportId" : 16,
+    "name" : "Leonardo da Vinci–Fiumicino Airport",
+    "city" : {
+      "cityId" : 16,
+      "name" : "Rome",
+      "country" : {
+        "countryId" : 16,
+        "name" : "Italy"
+      }
+    },
+    "latitude" : 41.8003,
+    "longitude" : 12.2389
+  },
+  "destinationAirport" : {
     "airportId" : 2,
     "name" : "Denver International Airport",
     "city" : {
@@ -18,19 +32,5 @@
     "latitude" : 39.8561,
     "longitude" : -104.6737
   },
-  "destinationAirport" : {
-    "airportId" : 5,
-    "name" : "Sydney Airport",
-    "city" : {
-      "cityId" : 5,
-      "name" : "Sydney",
-      "country" : {
-        "countryId" : 5,
-        "name" : "Australia"
-      }
-    },
-    "latitude" : -33.9461,
-    "longitude" : 151.1772
-  },
-  "price" : 1419.34
+  "price" : 968.13
 }

@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <flight>
     <airline>
-        <airlineId>2</airlineId>
-        <name>United Airlines</name>
+        <airlineId>16</airlineId>
+        <name>Alitalia</name>
     </airline>
     <destinationAirport>
-        <airportId>5</airportId>
-        <city>
-            <cityId>5</cityId>
-            <country>
-                <countryId>5</countryId>
-                <name>Australia</name>
-            </country>
-            <name>Sydney</name>
-        </city>
-        <latitude>-33.9461</latitude>
-        <longitude>151.1772</longitude>
-        <name>Sydney Airport</name>
-    </destinationAirport>
-    <flightId>23</flightId>
-    <price>1419.34</price>
-    <sourceAirport>
         <airportId>2</airportId>
         <city>
             <cityId>2</cityId>
@@ -33,5 +17,21 @@
         <latitude>39.8561</latitude>
         <longitude>-104.6737</longitude>
         <name>Denver International Airport</name>
+    </destinationAirport>
+    <flightId>287</flightId>
+    <price>968.13</price>
+    <sourceAirport>
+        <airportId>16</airportId>
+        <city>
+            <cityId>16</cityId>
+            <country>
+                <countryId>16</countryId>
+                <name>Italy</name>
+            </country>
+            <name>Rome</name>
+        </city>
+        <latitude>41.8003</latitude>
+        <longitude>12.2389</longitude>
+        <name>Leonardo da Vinci–Fiumicino Airport</name>
     </sourceAirport>
 </flight>
