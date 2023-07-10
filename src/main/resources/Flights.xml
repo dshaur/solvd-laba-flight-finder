@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <flight>
     <airline>
-        <airlineId>19</airlineId>
-        <name>Japan Airlines</name>
+        <airlineId>15</airlineId>
+        <name>Aeroméxico</name>
     </airline>
     <destinationAirport>
-        <airportId>10</airportId>
+        <airportId>6</airportId>
         <city>
-            <cityId>10</cityId>
+            <cityId>6</cityId>
             <country>
-                <countryId>10</countryId>
-                <name>Brazil</name>
+                <countryId>6</countryId>
+                <name>Peru</name>
             </country>
-            <name>São Paulo</name>
+            <name>Lima</name>
         </city>
-        <latitude>-23.4356</latitude>
-        <longitude>-46.4731</longitude>
-        <name>Guarulhos International Airport</name>
+        <latitude>-12.0219</latitude>
+        <longitude>-77.1143</longitude>
+        <name>Jorge Chávez International Airport</name>
     </destinationAirport>
-    <flightId>352</flightId>
-    <price>1928.93</price>
+    <flightId>272</flightId>
+    <price>299.5</price>
     <sourceAirport>
-        <airportId>19</airportId>
+        <airportId>15</airportId>
         <city>
-            <cityId>19</cityId>
+            <cityId>15</cityId>
             <country>
-                <countryId>19</countryId>
-                <name>Japan</name>
+                <countryId>15</countryId>
+                <name>Mexico</name>
             </country>
-            <name>Tokyo</name>
+            <name>Mexico City</name>
         </city>
-        <latitude>35.5494</latitude>
-        <longitude>139.7798</longitude>
-        <name>Tokyo Haneda Airport</name>
+        <latitude>19.4363</latitude>
+        <longitude>-99.072</longitude>
+        <name>Benito Juarez International Airport</name>
     </sourceAirport>
 </flight>

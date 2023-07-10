@@ -23,6 +23,12 @@ public class Main {
         City destination = UiUtils.selectCity();
         LOGGER.info("Selected destination city: " + destination.getName());
 
+        if (origin.getName().equals(destination.getName()))
+        {
+            LOGGER.info("Cities are the same. Closing program.");
+            System.exit(0);
+        }
+        
         String mode = UiUtils.getMode();
 
         if (mode.equalsIgnoreCase("s"))

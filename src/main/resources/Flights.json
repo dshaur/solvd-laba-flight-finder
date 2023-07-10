@@ -1,36 +1,36 @@
 {
-  "flightId" : 352,
+  "flightId" : 272,
   "airline" : {
-    "airlineId" : 19,
-    "name" : "Japan Airlines"
+    "airlineId" : 15,
+    "name" : "Aeroméxico"
   },
   "sourceAirport" : {
-    "airportId" : 19,
-    "name" : "Tokyo Haneda Airport",
+    "airportId" : 15,
+    "name" : "Benito Juarez International Airport",
     "city" : {
-      "cityId" : 19,
-      "name" : "Tokyo",
+      "cityId" : 15,
+      "name" : "Mexico City",
       "country" : {
-        "countryId" : 19,
-        "name" : "Japan"
+        "countryId" : 15,
+        "name" : "Mexico"
       }
     },
-    "latitude" : 35.5494,
-    "longitude" : 139.7798
+    "latitude" : 19.4363,
+    "longitude" : -99.072
   },
   "destinationAirport" : {
-    "airportId" : 10,
-    "name" : "Guarulhos International Airport",
+    "airportId" : 6,
+    "name" : "Jorge Chávez International Airport",
     "city" : {
-      "cityId" : 10,
-      "name" : "São Paulo",
+      "cityId" : 6,
+      "name" : "Lima",
       "country" : {
-        "countryId" : 10,
-        "name" : "Brazil"
+        "countryId" : 6,
+        "name" : "Peru"
       }
     },
-    "latitude" : -23.4356,
-    "longitude" : -46.4731
+    "latitude" : -12.0219,
+    "longitude" : -77.1143
   },
-  "price" : 1928.93
+  "price" : 299.5
 }

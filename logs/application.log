@@ -1841,3 +1841,346 @@ Latitude: -23.4356
 Longitude: -46.4731
 
 Price: 1928.93
+2023-07-09 19:03:30,758 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-09 19:03:30,777 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:03:30,778 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:03:30,779 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:03:30,779 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:03:30,779 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:03:30,780 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:03:30,780 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:03:30,781 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:03:30,782 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:03:30,782 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:03:30,783 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:03:30,783 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:03:30,784 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:03:30,784 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:03:30,785 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:03:30,785 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:03:30,786 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:03:30,786 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:03:30,786 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:03:30,787 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:03:30,787 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:03:35,767 [main] INFO  com.solvd.block3.business_logic.Main - Selected origin city: Mumbai
+2023-07-09 19:03:35,768 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-09 19:03:35,769 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:03:35,769 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:03:35,770 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:03:35,770 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:03:35,771 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:03:35,771 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:03:35,771 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:03:35,772 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:03:35,772 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:03:35,773 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:03:35,773 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:03:35,774 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:03:35,774 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:03:35,775 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:03:35,775 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:03:35,776 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:03:35,776 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:03:35,776 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:03:35,777 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:03:35,777 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:03:35,778 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:03:39,249 [main] INFO  com.solvd.block3.business_logic.Main - Selected destination city: Seoul
+2023-07-09 19:03:39,250 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 's' to get the shortest path or 'c' for the cheapest
+2023-07-09 19:03:40,464 [main] INFO  com.solvd.block3.business_logic.Main - The shortest path is a direct one. Getting info...
+2023-07-09 19:05:40,891 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-09 19:05:40,909 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:05:40,910 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:05:40,910 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:05:40,911 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:05:40,911 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:05:40,912 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:05:40,912 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:05:40,912 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:05:40,913 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:05:40,913 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:05:40,914 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:05:40,914 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:05:40,914 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:05:40,915 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:05:40,915 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:05:40,916 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:05:40,916 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:05:40,916 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:05:40,917 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:05:40,917 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:05:40,918 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:05:45,613 [main] INFO  com.solvd.block3.business_logic.Main - Selected origin city: Seoul
+2023-07-09 19:05:45,615 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-09 19:05:45,616 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:05:45,617 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:05:45,619 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:05:45,620 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:05:45,621 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:05:45,622 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:05:45,622 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:05:45,623 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:05:45,623 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:05:45,624 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:05:45,624 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:05:45,624 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:05:45,625 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:05:45,625 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:05:45,626 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:05:45,626 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:05:45,626 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:05:45,627 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:05:45,627 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:05:45,627 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:05:45,628 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:05:48,889 [main] INFO  com.solvd.block3.business_logic.Main - Selected destination city: Seoul
+2023-07-09 19:05:48,889 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 's' to get the shortest path or 'c' for the cheapest
+2023-07-09 19:05:50,925 [main] INFO  com.solvd.block3.business_logic.Main - The shortest path is a direct one. Getting info...
+2023-07-09 19:11:18,100 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-09 19:11:18,131 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:11:18,131 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:11:18,132 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:11:18,132 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:11:18,133 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:11:18,133 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:11:18,134 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:11:18,134 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:11:18,134 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:11:18,135 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:11:18,135 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:11:18,136 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:11:18,136 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:11:18,137 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:11:18,137 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:11:18,137 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:11:18,138 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:11:18,138 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:11:18,139 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:11:18,139 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:11:18,139 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:11:24,354 [main] INFO  com.solvd.block3.business_logic.Main - Selected origin city: Seoul
+2023-07-09 19:11:24,355 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-09 19:11:24,355 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:11:24,356 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:11:24,356 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:11:24,357 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:11:24,357 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:11:24,358 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:11:24,358 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:11:24,358 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:11:24,359 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:11:24,359 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:11:24,360 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:11:24,360 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:11:24,361 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:11:24,361 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:11:24,362 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:11:24,362 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:11:24,363 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:11:24,363 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:11:24,363 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:11:24,364 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:11:24,364 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:11:27,897 [main] INFO  com.solvd.block3.business_logic.Main - Selected destination city: Seoul
+2023-07-09 19:11:27,898 [main] INFO  com.solvd.block3.business_logic.Main - Cities are the same. Closing program.
+2023-07-09 19:11:38,268 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-09 19:11:38,285 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:11:38,286 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:11:38,286 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:11:38,287 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:11:38,287 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:11:38,288 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:11:38,288 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:11:38,289 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:11:38,289 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:11:38,290 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:11:38,290 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:11:38,291 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:11:38,291 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:11:38,291 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:11:38,292 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:11:38,293 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:11:38,293 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:11:38,294 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:11:38,294 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:11:38,294 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:11:38,295 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:12:04,905 [main] INFO  com.solvd.block3.business_logic.Main - Selected origin city: Denver
+2023-07-09 19:12:04,906 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-09 19:12:04,907 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:12:04,909 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:12:04,909 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:12:04,910 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:12:04,910 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:12:04,911 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:12:04,911 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:12:04,911 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:12:04,912 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:12:04,912 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:12:04,913 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:12:04,913 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:12:04,914 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:12:04,914 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:12:04,914 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:12:04,915 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:12:04,915 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:12:04,916 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:12:04,916 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:12:04,916 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:12:04,917 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:12:08,078 [main] INFO  com.solvd.block3.business_logic.Main - Selected destination city: Sydney
+2023-07-09 19:12:08,079 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 's' to get the shortest path or 'c' for the cheapest
+2023-07-09 19:12:09,223 [main] INFO  com.solvd.block3.business_logic.Main - The shortest path is a direct one. Getting info...
+2023-07-09 19:12:16,681 [main] INFO  com.solvd.block3.business_logic.Main - Information about the flight:
+2023-07-09 19:12:16,683 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 23
+Airline:
+Airline United Airlines:
+Id: 2
+Source Airport:
+Airport Denver International Airport:
+Id: 2
+City:
+City Denver:
+Id: 2
+Country:
+Country United States:
+Id: 2
+
+
+Latitude: 39.8561
+Longitude: -104.6737
+
+Destination Airport:
+Airport Sydney Airport:
+Id: 5
+City:
+City Sydney:
+Id: 5
+Country:
+Country Australia:
+Id: 5
+
+
+Latitude: -33.9461
+Longitude: 151.1772
+
+Price: 1419.34
+2023-07-09 19:12:21,085 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-09 19:12:21,101 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:12:21,102 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:12:21,102 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:12:21,103 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:12:21,103 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:12:21,104 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:12:21,104 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:12:21,104 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:12:21,105 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:12:21,106 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:12:21,106 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:12:21,107 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:12:21,108 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:12:21,108 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:12:21,108 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:12:21,109 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:12:21,109 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:12:21,109 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:12:21,110 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:12:21,110 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:12:21,111 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:13:15,767 [main] INFO  com.solvd.block3.business_logic.Main - Selected origin city: Denver
+2023-07-09 19:13:15,769 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-09 19:13:15,770 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 19:13:15,771 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 19:13:15,772 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 19:13:15,773 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 19:13:15,774 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 19:13:15,775 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 19:13:15,775 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 19:13:15,776 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 19:13:15,776 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 19:13:15,777 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 19:13:15,777 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 19:13:15,778 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 19:13:15,778 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 19:13:15,778 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 19:13:15,779 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 19:13:15,779 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 19:13:15,779 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 19:13:15,780 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 19:13:15,780 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 19:13:15,781 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 19:13:15,781 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 19:13:19,371 [main] INFO  com.solvd.block3.business_logic.Main - Selected destination city: Lima
+2023-07-09 19:13:19,372 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 's' to get the shortest path or 'c' for the cheapest
+2023-07-09 19:13:20,253 [main] INFO  com.solvd.block3.business_logic.Main - Finding cheapest path...
+2023-07-09 19:13:33,585 [main] INFO  com.solvd.block3.business_logic.Main - Flights to get to Lima from Denver
+2023-07-09 19:13:33,587 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 33
+Airline:
+Airline United Airlines:
+Id: 2
+Source Airport:
+Airport Denver International Airport:
+Id: 2
+City:
+City Denver:
+Id: 2
+Country:
+Country United States:
+Id: 2
+
+
+Latitude: 39.8561
+Longitude: -104.6737
+
+Destination Airport:
+Airport Benito Juarez International Airport:
+Id: 15
+City:
+City Mexico City:
+Id: 15
+Country:
+Country Mexico:
+Id: 15
+
+
+Latitude: 19.4363
+Longitude: -99.072
+
+Price: 308.29
+2023-07-09 19:13:33,952 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 272
+Airline:
+Airline Aeroméxico:
+Id: 15
+Source Airport:
+Airport Benito Juarez International Airport:
+Id: 15
+City:
+City Mexico City:
+Id: 15
+Country:
+Country Mexico:
+Id: 15
+
+
+Latitude: 19.4363
+Longitude: -99.072
+
+Destination Airport:
+Airport Jorge Chávez International Airport:
+Id: 6
+City:
+City Lima:
+Id: 6
+Country:
+Country Peru:
+Id: 6
+
+
+Latitude: -12.0219
+Longitude: -77.1143
+
+Price: 299.5

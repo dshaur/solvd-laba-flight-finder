@@ -131,7 +131,8 @@ public class UiUtils
     private static List<Flight> findFlightsByAirportIds(List<Integer> airportIds)
     {
         List<Flight> ret = new ArrayList<Flight>();
-        for (int i = 0; i < airportIds.size(); i += 2)
+
+        for (int i = 0; i < airportIds.size() - 1; i++)
         {
             ArrayList<Flight> sourceFlights = FLIGHT_SERVICE.getFlightBySourceAirport(airportIds.get(i));
             for(Flight flight : sourceFlights)
@@ -142,7 +143,8 @@ public class UiUtils
                 }
             }
         }
-
+        
         return ret;
     }
+
 }
