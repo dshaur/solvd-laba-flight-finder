@@ -24,32 +24,11 @@ public class UiUtils
     private static final String JSON_PATH = "src/main/resources/Flights.json";
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final Logger LOGGER = LogManager.getLogger(UiUtils.class);
-    private static final Map<String, String> cityMap = createCityMap();
-    private static final Pattern numberPattern = Pattern.compile("\\d+");
+    private static final Map<String, String> CITY_MAP = createCityMap();
+    private static final Pattern NUMBER_PATTERN = Pattern.compile("\\d+");
     private static final CityServiceMyBatis CITY_SERVICE = new CityServiceMyBatis();
     private static final AirportServiceMyBatis AIRPORT_SERVICE = new AirportServiceMyBatis();
     private static final FlightServiceMyBatis FLIGHT_SERVICE = new FlightServiceMyBatis();
-
-    public static String getMode()
-    {
-        LOGGER.info("Enter 'c' for cheapest route, 's' for shortest route.");
-        String mode = SCANNER.nextLine();
-
-        while (true)
-        {
-            if (mode.equalsIgnoreCase("c") || mode.equalsIgnoreCase("s"))
-            {
-                return mode;
-            }
-
-            else
-            {
-                LOGGER.error("Invalid input.");
-                LOGGER.info("Enter 'c' for cheapest route, 's' for shortest route.");
-                mode = SCANNER.nextLine();
-            }
-        }
-    }
 
     private static Map<String, String> createCityMap() {
         Map<String, String> cityMap = new LinkedHashMap<>();
@@ -78,16 +57,16 @@ public class UiUtils
 
     public static String selectCity() {
         LOGGER.info("Available cities:");
-        for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+        for (Map.Entry<String, String> entry : CITY_MAP.entrySet()) {
             LOGGER.info(entry.getKey() + ": " + entry.getValue());
         }
 
         String input = SCANNER.nextLine().trim();
         String cityId = null;
-        if (numberPattern.matcher(input).matches()) {
+        if (NUMBER_PATTERN.matcher(input).matches()) {
             cityId = input;
         } else {
-            for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+            for (Map.Entry<String, String> entry : CITY_MAP.entrySet()) {
                 if (entry.getValue().equalsIgnoreCase(input)) {
                     cityId = entry.getKey();
                     break;
@@ -98,10 +77,10 @@ public class UiUtils
         while (cityId == null || !validateCity(cityId)) {
             LOGGER.error("Invalid input. Please enter a valid city ID or name.");
             input = SCANNER.nextLine().trim();
-            if (numberPattern.matcher(input).matches()) {
+            if (NUMBER_PATTERN.matcher(input).matches()) {
                 cityId = input;
             } else {
-                for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+                for (Map.Entry<String, String> entry : CITY_MAP.entrySet()) {
                     if (entry.getValue().equalsIgnoreCase(input)) {
                         cityId = entry.getKey();
                         break;
@@ -110,10 +89,32 @@ public class UiUtils
             }
         }
 
-        return cityMap.get(cityId);
+        return CITY_MAP.get(cityId);
     }
 
     public static boolean validateCity(String cityId) {
-        return cityMap.containsKey(cityId);
+        return CITY_MAP.containsKey(cityId);
+    }
+
+
+    public static String getMode()
+    {
+        LOGGER.info("Enter 'c' for cheapest route, 's' for shortest route.");
+        String mode = SCANNER.nextLine();
+
+        while (true)
+        {
+            if (mode.equalsIgnoreCase("c") || mode.equalsIgnoreCase("s"))
+            {
+                return mode;
+            }
+
+            else
+            {
+                LOGGER.error("Invalid input.");
+                LOGGER.info("Enter 'c' for cheapest route, 's' for shortest route.");
+                mode = SCANNER.nextLine();
+            }
+        }
     }
 }
