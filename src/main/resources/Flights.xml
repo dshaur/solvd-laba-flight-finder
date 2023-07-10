@@ -1,77 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<flightList>
-    <flights>
-        <flight>
-            <airline>
-                <airlineId>2</airlineId>
-                <name>United Airlines</name>
-            </airline>
-            <destinationAirport>
-                <airportId>15</airportId>
-                <city>
-                    <cityId>15</cityId>
-                    <country>
-                        <countryId>15</countryId>
-                        <name>Mexico</name>
-                    </country>
-                    <name>Mexico City</name>
-                </city>
-                <latitude>19.4363</latitude>
-                <longitude>-99.072</longitude>
-                <name>Benito Juarez International Airport</name>
-            </destinationAirport>
-            <flightId>33</flightId>
-            <price>466.58</price>
-            <sourceAirport>
-                <airportId>2</airportId>
-                <city>
-                    <cityId>2</cityId>
-                    <country>
-                        <countryId>2</countryId>
-                        <name>United States</name>
-                    </country>
-                    <name>Denver</name>
-                </city>
-                <latitude>39.8561</latitude>
-                <longitude>-104.6737</longitude>
-                <name>Denver International Airport</name>
-            </sourceAirport>
-        </flight>
-        <flight>
-            <airline>
-                <airlineId>15</airlineId>
-                <name>Aeroméxico</name>
-            </airline>
-            <destinationAirport>
-                <airportId>6</airportId>
-                <city>
-                    <cityId>6</cityId>
-                    <country>
-                        <countryId>6</countryId>
-                        <name>Peru</name>
-                    </country>
-                    <name>Lima</name>
-                </city>
-                <latitude>-12.0219</latitude>
-                <longitude>-77.1143</longitude>
-                <name>Jorge Chávez International Airport</name>
-            </destinationAirport>
-            <flightId>272</flightId>
-            <price>849.0</price>
-            <sourceAirport>
-                <airportId>15</airportId>
-                <city>
-                    <cityId>15</cityId>
-                    <country>
-                        <countryId>15</countryId>
-                        <name>Mexico</name>
-                    </country>
-                    <name>Mexico City</name>
-                </city>
-                <latitude>19.4363</latitude>
-                <longitude>-99.072</longitude>
-                <name>Benito Juarez International Airport</name>
-            </sourceAirport>
-        </flight>
-    </flights>
-</flightList>
+<flight>
+    <airline>
+        <airlineId>1</airlineId>
+        <name>Korean Air</name>
+    </airline>
+    <destinationAirport>
+        <airportId>2</airportId>
+        <city>
+            <cityId>2</cityId>
+            <country>
+                <countryId>2</countryId>
+                <name>United States</name>
+            </country>
+            <name>Denver</name>
+        </city>
+        <latitude>39.8561</latitude>
+        <longitude>-104.6737</longitude>
+        <name>Denver International Airport</name>
+    </destinationAirport>
+    <flightId>1</flightId>
+    <price>3992.28</price>
+    <sourceAirport>
+        <airportId>1</airportId>
+        <city>
+            <cityId>1</cityId>
+            <country>
+                <countryId>1</countryId>
+                <name>South Korea</name>
+            </country>
+            <name>Seoul</name>
+        </city>
+        <latitude>37.4602</latitude>
+        <longitude>126.4407</longitude>
+        <name>Incheon International Airport</name>
+    </sourceAirport>
+</flight>

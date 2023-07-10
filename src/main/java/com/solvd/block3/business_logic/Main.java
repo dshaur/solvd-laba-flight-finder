@@ -24,10 +24,10 @@ public class Main {
         City destination = UiUtils.selectCity();
         LOGGER.info("Selected destination city: " + destination.getName());
 
-        if (origin.getName().equals(destination.getName()))
+        while (origin.getName().equals(destination.getName()))
         {
-            LOGGER.info("Cities are the same. Closing program.");
-            System.exit(0);
+            LOGGER.info("Cities are the same. Please use a city that is not " + origin.getName());
+            destination = UiUtils.selectCity();
         }
 
         String mode = UiUtils.getMode();

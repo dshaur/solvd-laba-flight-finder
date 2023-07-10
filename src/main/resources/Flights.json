@@ -1,73 +1,36 @@
 {
-  "flights" : [ {
-    "flightId" : 33,
-    "airline" : {
-      "airlineId" : 2,
-      "name" : "United Airlines"
+  "flightId" : 1,
+  "airline" : {
+    "airlineId" : 1,
+    "name" : "Korean Air"
+  },
+  "sourceAirport" : {
+    "airportId" : 1,
+    "name" : "Incheon International Airport",
+    "city" : {
+      "cityId" : 1,
+      "name" : "Seoul",
+      "country" : {
+        "countryId" : 1,
+        "name" : "South Korea"
+      }
     },
-    "sourceAirport" : {
-      "airportId" : 2,
-      "name" : "Denver International Airport",
-      "city" : {
-        "cityId" : 2,
-        "name" : "Denver",
-        "country" : {
-          "countryId" : 2,
-          "name" : "United States"
-        }
-      },
-      "latitude" : 39.8561,
-      "longitude" : -104.6737
+    "latitude" : 37.4602,
+    "longitude" : 126.4407
+  },
+  "destinationAirport" : {
+    "airportId" : 2,
+    "name" : "Denver International Airport",
+    "city" : {
+      "cityId" : 2,
+      "name" : "Denver",
+      "country" : {
+        "countryId" : 2,
+        "name" : "United States"
+      }
     },
-    "destinationAirport" : {
-      "airportId" : 15,
-      "name" : "Benito Juarez International Airport",
-      "city" : {
-        "cityId" : 15,
-        "name" : "Mexico City",
-        "country" : {
-          "countryId" : 15,
-          "name" : "Mexico"
-        }
-      },
-      "latitude" : 19.4363,
-      "longitude" : -99.072
-    },
-    "price" : 466.58
-  }, {
-    "flightId" : 272,
-    "airline" : {
-      "airlineId" : 15,
-      "name" : "Aeroméxico"
-    },
-    "sourceAirport" : {
-      "airportId" : 15,
-      "name" : "Benito Juarez International Airport",
-      "city" : {
-        "cityId" : 15,
-        "name" : "Mexico City",
-        "country" : {
-          "countryId" : 15,
-          "name" : "Mexico"
-        }
-      },
-      "latitude" : 19.4363,
-      "longitude" : -99.072
-    },
-    "destinationAirport" : {
-      "airportId" : 6,
-      "name" : "Jorge Chávez International Airport",
-      "city" : {
-        "cityId" : 6,
-        "name" : "Lima",
-        "country" : {
-          "countryId" : 6,
-          "name" : "Peru"
-        }
-      },
-      "latitude" : -12.0219,
-      "longitude" : -77.1143
-    },
-    "price" : 849.0
-  } ]
+    "latitude" : 39.8561,
+    "longitude" : -104.6737
+  },
+  "price" : 3992.28
 }
