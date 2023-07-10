@@ -45,24 +45,4 @@ public class City {
                 "Id: " + cityId + "\n" + 
                 "Country:\n" + country + "\n";
     }
-
-    @Override
-    public boolean equals(Object o)
-    {
-        City toCompare = (City) o;
-        if (this.cityId == toCompare.cityId &&
-            this.name.equals(toCompare.name) &&
-            this.country.equals(toCompare.country))
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public int hashCode()
-    {
-        return 100 * cityId;
-    }
 }

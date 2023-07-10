@@ -35,23 +35,4 @@ public class Country {
         return "Country " + name + ":\n" +
                 "Id: " + countryId + "\n";
     }
-
-    @Override
-    public boolean equals(Object o)
-    {
-        Country toCompare = (Country) o;
-        if (this.countryId == toCompare.countryId &&
-            this.name.equals(toCompare.name))
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public int hashCode()
-    {
-        return 100 * countryId;
-    }
 }

@@ -1758,3 +1758,86 @@ Latitude: 39.8561
 Longitude: -104.6737
 
 Price: 968.13
+2023-07-09 18:44:31,793 [main] INFO  com.solvd.block3.business_logic.Main - Welcome to the flight finder. Please input an origin city.
+2023-07-09 18:44:31,811 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 18:44:31,811 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 18:44:31,812 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 18:44:31,812 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 18:44:31,813 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 18:44:31,813 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 18:44:31,814 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 18:44:31,815 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 18:44:31,815 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 18:44:31,815 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 18:44:31,816 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 18:44:31,816 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 18:44:31,817 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 18:44:31,817 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 18:44:31,818 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 18:44:31,818 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 18:44:31,819 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 18:44:31,820 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 18:44:31,820 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 18:44:31,821 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 18:44:31,821 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 18:44:37,486 [main] INFO  com.solvd.block3.business_logic.Main - Selected origin city: Tokyo
+2023-07-09 18:44:37,486 [main] INFO  com.solvd.block3.business_logic.Main - Now input a destination.
+2023-07-09 18:44:37,487 [main] INFO  com.solvd.block3.ui.UiUtils - Available cities:
+2023-07-09 18:44:37,487 [main] INFO  com.solvd.block3.ui.UiUtils - 1: Seoul
+2023-07-09 18:44:37,488 [main] INFO  com.solvd.block3.ui.UiUtils - 2: Denver
+2023-07-09 18:44:37,488 [main] INFO  com.solvd.block3.ui.UiUtils - 3: London
+2023-07-09 18:44:37,489 [main] INFO  com.solvd.block3.ui.UiUtils - 4: Dubai
+2023-07-09 18:44:37,489 [main] INFO  com.solvd.block3.ui.UiUtils - 5: Sydney
+2023-07-09 18:44:37,489 [main] INFO  com.solvd.block3.ui.UiUtils - 6: Lima
+2023-07-09 18:44:37,490 [main] INFO  com.solvd.block3.ui.UiUtils - 7: Paris
+2023-07-09 18:44:37,490 [main] INFO  com.solvd.block3.ui.UiUtils - 8: Berlin
+2023-07-09 18:44:37,490 [main] INFO  com.solvd.block3.ui.UiUtils - 9: Beijing
+2023-07-09 18:44:37,491 [main] INFO  com.solvd.block3.ui.UiUtils - 10: São Paulo
+2023-07-09 18:44:37,491 [main] INFO  com.solvd.block3.ui.UiUtils - 11: Toronto
+2023-07-09 18:44:37,492 [main] INFO  com.solvd.block3.ui.UiUtils - 12: Mumbai
+2023-07-09 18:44:37,492 [main] INFO  com.solvd.block3.ui.UiUtils - 13: Moscow
+2023-07-09 18:44:37,492 [main] INFO  com.solvd.block3.ui.UiUtils - 14: Amsterdam
+2023-07-09 18:44:37,493 [main] INFO  com.solvd.block3.ui.UiUtils - 15: Mexico City
+2023-07-09 18:44:37,493 [main] INFO  com.solvd.block3.ui.UiUtils - 16: Rome
+2023-07-09 18:44:37,494 [main] INFO  com.solvd.block3.ui.UiUtils - 17: Madrid
+2023-07-09 18:44:37,494 [main] INFO  com.solvd.block3.ui.UiUtils - 18: Istanbul
+2023-07-09 18:44:37,495 [main] INFO  com.solvd.block3.ui.UiUtils - 19: Tokyo
+2023-07-09 18:44:37,495 [main] INFO  com.solvd.block3.ui.UiUtils - 20: Cape Town
+2023-07-09 18:44:41,075 [main] INFO  com.solvd.block3.business_logic.Main - Selected destination city: São Paulo
+2023-07-09 18:44:41,076 [main] INFO  com.solvd.block3.ui.UiUtils - Enter 's' to get the shortest path or 'c' for the cheapest
+2023-07-09 18:44:46,721 [main] INFO  com.solvd.block3.business_logic.Main - The shortest path is a direct one. Getting info...
+2023-07-09 18:44:54,075 [main] INFO  com.solvd.block3.business_logic.Main - Information about the flight:
+2023-07-09 18:44:54,077 [main] INFO  com.solvd.block3.business_logic.Main - Flight:
+Id: 352
+Airline:
+Airline Japan Airlines:
+Id: 19
+Source Airport:
+Airport Tokyo Haneda Airport:
+Id: 19
+City:
+City Tokyo:
+Id: 19
+Country:
+Country Japan:
+Id: 19
+
+
+Latitude: 35.5494
+Longitude: 139.7798
+
+Destination Airport:
+Airport Guarulhos International Airport:
+Id: 10
+City:
+City São Paulo:
+Id: 10
+Country:
+Country Brazil:
+Id: 10
+
+
+Latitude: -23.4356
+Longitude: -46.4731
+
+Price: 1928.93

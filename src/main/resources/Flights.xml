@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <flight>
     <airline>
-        <airlineId>16</airlineId>
-        <name>Alitalia</name>
+        <airlineId>19</airlineId>
+        <name>Japan Airlines</name>
     </airline>
     <destinationAirport>
-        <airportId>2</airportId>
+        <airportId>10</airportId>
         <city>
-            <cityId>2</cityId>
+            <cityId>10</cityId>
             <country>
-                <countryId>2</countryId>
-                <name>United States</name>
+                <countryId>10</countryId>
+                <name>Brazil</name>
             </country>
-            <name>Denver</name>
+            <name>São Paulo</name>
         </city>
-        <latitude>39.8561</latitude>
-        <longitude>-104.6737</longitude>
-        <name>Denver International Airport</name>
+        <latitude>-23.4356</latitude>
+        <longitude>-46.4731</longitude>
+        <name>Guarulhos International Airport</name>
     </destinationAirport>
-    <flightId>287</flightId>
-    <price>968.13</price>
+    <flightId>352</flightId>
+    <price>1928.93</price>
     <sourceAirport>
-        <airportId>16</airportId>
+        <airportId>19</airportId>
         <city>
-            <cityId>16</cityId>
+            <cityId>19</cityId>
             <country>
-                <countryId>16</countryId>
-                <name>Italy</name>
+                <countryId>19</countryId>
+                <name>Japan</name>
             </country>
-            <name>Rome</name>
+            <name>Tokyo</name>
         </city>
-        <latitude>41.8003</latitude>
-        <longitude>12.2389</longitude>
-        <name>Leonardo da Vinci–Fiumicino Airport</name>
+        <latitude>35.5494</latitude>
+        <longitude>139.7798</longitude>
+        <name>Tokyo Haneda Airport</name>
     </sourceAirport>
 </flight>

@@ -1,36 +1,36 @@
 {
-  "flightId" : 287,
+  "flightId" : 352,
   "airline" : {
-    "airlineId" : 16,
-    "name" : "Alitalia"
+    "airlineId" : 19,
+    "name" : "Japan Airlines"
   },
   "sourceAirport" : {
-    "airportId" : 16,
-    "name" : "Leonardo da Vinci–Fiumicino Airport",
+    "airportId" : 19,
+    "name" : "Tokyo Haneda Airport",
     "city" : {
-      "cityId" : 16,
-      "name" : "Rome",
+      "cityId" : 19,
+      "name" : "Tokyo",
       "country" : {
-        "countryId" : 16,
-        "name" : "Italy"
+        "countryId" : 19,
+        "name" : "Japan"
       }
     },
-    "latitude" : 41.8003,
-    "longitude" : 12.2389
+    "latitude" : 35.5494,
+    "longitude" : 139.7798
   },
   "destinationAirport" : {
-    "airportId" : 2,
-    "name" : "Denver International Airport",
+    "airportId" : 10,
+    "name" : "Guarulhos International Airport",
     "city" : {
-      "cityId" : 2,
-      "name" : "Denver",
+      "cityId" : 10,
+      "name" : "São Paulo",
       "country" : {
-        "countryId" : 2,
-        "name" : "United States"
+        "countryId" : 10,
+        "name" : "Brazil"
       }
     },
-    "latitude" : 39.8561,
-    "longitude" : -104.6737
+    "latitude" : -23.4356,
+    "longitude" : -46.4731
   },
-  "price" : 968.13
+  "price" : 1928.93
 }

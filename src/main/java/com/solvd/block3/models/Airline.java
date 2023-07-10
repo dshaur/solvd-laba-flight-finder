@@ -35,23 +35,4 @@ public class Airline {
         return "Airline " + name + ":\n" +
                 "Id: " + airlineId;
     }
-
-    @Override
-    public boolean equals(Object o)
-    {
-        Airline toCompare = (Airline) o;
-        if (this.airlineId == toCompare.airlineId &&
-            this.name.equals(toCompare.name))
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public int hashCode()
-    {
-        return 100 * airlineId;
-    }
 }

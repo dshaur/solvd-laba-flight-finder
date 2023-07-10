@@ -72,27 +72,4 @@ public class Flight {
                 "Destination Airport:\n" + destinationAirport + "\n" + 
                 "Price: " + price;
     }
-
-    @Override
-    public boolean equals(Object o)
-    {
-        Flight toCompare = (Flight) o;
-        if (this.flightId == toCompare.flightId &&
-            this.price == toCompare.price &&
-            this.airline.equals(toCompare.airline) &&
-            this.airline.getName().equals(toCompare.getAirline().getName()) &&
-            this.sourceAirport.equals(toCompare.getSourceAirport()) &&
-            this.destinationAirport.equals(toCompare.getDestinationAirport()))
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public int hashCode()
-    {
-        return 100 * flightId;
-    }
 }
