@@ -1,39 +1,24 @@
 package com.solvd.block3.business_logic;
 
+import com.solvd.block3.ui.UiUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.solvd.block3.models.*;
 import com.solvd.block3.ui.UiUtils;
 
-public class Main 
-{
+public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
+    private static final String XML_PATH = "src/main/resources/Flights.xml";
+    private static final String JSON_PATH = "src/main/resources/Flights.json";
 
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         LOGGER.info("Welcome to the flight finder. Please input an origin city.");
-        City origin = UiUtils.makeCity();
+
+        String origin = UiUtils.selectCity();
+        LOGGER.info("Selected origin city: " + origin);
 
         LOGGER.info("Now input a destination.");
-        City destination = UiUtils.makeCity();
-
-        if (origin.equals(destination))
-        {
-            LOGGER.info("Source and destination cities are the same. No need to find a route.");
-            System.exit(0);
-        }
-
-        String mode = UiUtils.getMode();
-
-
-        if (mode.equalsIgnoreCase("s"))
-        {
-            UiUtils.makeShortestRoute(origin, destination);
-        }
-
-        else
-        {
-            UiUtils.makeCheapestRoute(origin, destination);
-        }
+        String destination = UiUtils.selectCity();
+        LOGGER.info("Selected destination city: " + destination);
     }
 }

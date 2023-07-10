@@ -13,6 +13,10 @@ import com.solvd.block3.services.AirportServiceMyBatis;
 import com.solvd.block3.services.CityServiceMyBatis;
 import com.solvd.block3.services.FlightServiceMyBatis;
 import com.solvd.block3.xml.XmlMaker;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class UiUtils 
 {    
@@ -20,6 +24,8 @@ public class UiUtils
     private static final String JSON_PATH = "src/main/resources/Flights.json";
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final Logger LOGGER = LogManager.getLogger(UiUtils.class);
+    private static final Map<String, String> cityMap = createCityMap();
+    private static final Pattern numberPattern = Pattern.compile("\\d+");
     private static final CityServiceMyBatis CITY_SERVICE = new CityServiceMyBatis();
     private static final AirportServiceMyBatis AIRPORT_SERVICE = new AirportServiceMyBatis();
     private static final FlightServiceMyBatis FLIGHT_SERVICE = new FlightServiceMyBatis();
@@ -45,63 +51,69 @@ public class UiUtils
         }
     }
 
-    public static City makeCity()
-    {
-        String name = SCANNER.nextLine();
-        City ret = CITY_SERVICE.getCityByName(name);
+    private static Map<String, String> createCityMap() {
+        Map<String, String> cityMap = new LinkedHashMap<>();
+        cityMap.put("1", "Seoul");
+        cityMap.put("2", "Denver");
+        cityMap.put("3", "London");
+        cityMap.put("4", "Dubai");
+        cityMap.put("5", "Sydney");
+        cityMap.put("6", "Lima");
+        cityMap.put("7", "Paris");
+        cityMap.put("8", "Berlin");
+        cityMap.put("9", "Beijing");
+        cityMap.put("10", "São Paulo");
+        cityMap.put("11", "Toronto");
+        cityMap.put("12", "Mumbai");
+        cityMap.put("13", "Moscow");
+        cityMap.put("14", "Amsterdam");
+        cityMap.put("15", "Mexico City");
+        cityMap.put("16", "Rome");
+        cityMap.put("17", "Madrid");
+        cityMap.put("18", "Istanbul");
+        cityMap.put("19", "Tokyo");
+        cityMap.put("20", "Cape Town");
+        return cityMap;
+    }
 
-        while (ret == null)
-        {
-            LOGGER.error("City doesn't exist in database. Please try again.");
-            name = SCANNER.nextLine();
-            ret = CITY_SERVICE.getCityByName(name);
+    public static String selectCity() {
+        LOGGER.info("Available cities:");
+        for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+            LOGGER.info(entry.getKey() + ": " + entry.getValue());
         }
 
-        return ret;
-    }
-
-    public static void makeShortestRoute(City source, City dest)
-    {
-        LOGGER.info("Getting data...");
-        Airport sourceAirport = AIRPORT_SERVICE.getAirportByCity(source);
-        Airport destAirport = AIRPORT_SERVICE.getAirportByCity(dest);
-        ArrayList<Flight> sourceFlights = FLIGHT_SERVICE.getFlightBySourceAirport(sourceAirport.getAirportId());
-        ArrayList<Flight> commonFlights = new ArrayList<Flight>();
-
-        sourceFlights.forEach(flight -> 
-        {   
-            if (flight.getDestinationAirport().equals(destAirport))
-            {
-                commonFlights.add(flight);
+        String input = SCANNER.nextLine().trim();
+        String cityId = null;
+        if (numberPattern.matcher(input).matches()) {
+            cityId = input;
+        } else {
+            for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+                if (entry.getValue().equalsIgnoreCase(input)) {
+                    cityId = entry.getKey();
+                    break;
+                }
             }
-        });
+        }
 
-        LOGGER.info("The shortest route between " + source.getName() + " and " + dest.getName() + " is a direct route.");
+        while (cityId == null || !validateCity(cityId)) {
+            LOGGER.error("Invalid input. Please enter a valid city ID or name.");
+            input = SCANNER.nextLine().trim();
+            if (numberPattern.matcher(input).matches()) {
+                cityId = input;
+            } else {
+                for (Map.Entry<String, String> entry : cityMap.entrySet()) {
+                    if (entry.getValue().equalsIgnoreCase(input)) {
+                        cityId = entry.getKey();
+                        break;
+                    }
+                }
+            }
+        }
 
-        printDirections(commonFlights);
+        return cityMap.get(cityId);
     }
 
-    public static void makeCheapestRoute(City source, City dest)
-    {
-        //Call alg here
-    }
-
-    private static void printDirections(List<Flight> flights)
-    {
-        LOGGER.info("Here is a list of directions.");
-        flights.forEach(flight -> 
-        {   
-            LOGGER.info("Go to " + 
-            flight.getSourceAirport().getName() + 
-            " and use " + 
-            flight.getAirline().getName() +
-            " to get to " +
-            flight.getDestinationAirport().getName());
-
-            XmlMaker.makeXml(XML_PATH, flight);
-            JsonMaker.makeJson(JSON_PATH, flight);
-        });
-
-        LOGGER.info("Arrived at " + flights.get(flights.size() - 1).getDestinationAirport().getCity().getName());
+    public static boolean validateCity(String cityId) {
+        return cityMap.containsKey(cityId);
     }
 }
