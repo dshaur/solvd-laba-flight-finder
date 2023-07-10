@@ -1,26 +1,61 @@
 package com.solvd.block3.business_logic;
 
+import com.solvd.block3.ui.UiUtils;
+import com.solvd.block3.xml.XmlMaker;
+import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.solvd.block3.json.JsonMaker;
-import com.solvd.block3.ui.UiUtils;
-import com.solvd.block3.xml.XmlMaker;
+import com.solvd.block3.models.*;
 
-public class Main 
-{
-    private static final Logger LOGGER = LogManager.getLogger(Main.class);
+public class Main {
     private static final String XML_PATH = "src/main/resources/Flights.xml";
     private static final String JSON_PATH = "src/main/resources/Flights.json";
-    
-    public static void main(String[] args) 
-    {
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
+
+    public static void main(String[] args) {
         LOGGER.info("Welcome to the flight finder. Please input an origin city.");
-        String origin = UiUtils.makeCity();
+
+        City origin = UiUtils.selectCity();
+        LOGGER.info("Selected origin city: " + origin.getName());
 
         LOGGER.info("Now input a destination.");
-        String destination = UiUtils.makeCity();
+        City destination = UiUtils.selectCity();
+        LOGGER.info("Selected destination city: " + destination.getName());
 
-        //For testing
-        LOGGER.info(origin + " " + destination);
+        if (origin.getName().equals(destination.getName()))
+        {
+            LOGGER.info("Cities are the same. Closing program.");
+            System.exit(0);
+        }
+
+        String mode = UiUtils.getMode();
+
+        if (mode.equalsIgnoreCase("s"))
+        {
+            LOGGER.info("The shortest path is a direct one. Getting info...");
+            Flight shortest = UiUtils.findShortestFlight(origin, destination);
+
+            LOGGER.info("Information about the flight:");
+            LOGGER.info(shortest);
+            XmlMaker.makeXml(XML_PATH, shortest);
+            JsonMaker.makeJson(JSON_PATH, shortest);
+        }
+
+        else if (mode.equalsIgnoreCase("c"))
+        {
+            LOGGER.info("Finding cheapest path...");
+            List<Flight> flightsOfCheapest = UiUtils.findCheapestPathFlights(origin, destination);
+
+            LOGGER.info("Flights to get to " + destination.getName() + " from " + origin.getName());
+            flightsOfCheapest.forEach(flight ->
+            {
+                LOGGER.info(flight);
+            });
+            FlightList list = new FlightList(flightsOfCheapest);
+
+            XmlMaker.makeXml(XML_PATH, list);
+            JsonMaker.makeJson(JSON_PATH, list);
+        }
     }
 }

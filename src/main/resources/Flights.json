@@ -1,0 +1,73 @@
+{
+  "flights" : [ {
+    "flightId" : 33,
+    "airline" : {
+      "airlineId" : 2,
+      "name" : "United Airlines"
+    },
+    "sourceAirport" : {
+      "airportId" : 2,
+      "name" : "Denver International Airport",
+      "city" : {
+        "cityId" : 2,
+        "name" : "Denver",
+        "country" : {
+          "countryId" : 2,
+          "name" : "United States"
+        }
+      },
+      "latitude" : 39.8561,
+      "longitude" : -104.6737
+    },
+    "destinationAirport" : {
+      "airportId" : 15,
+      "name" : "Benito Juarez International Airport",
+      "city" : {
+        "cityId" : 15,
+        "name" : "Mexico City",
+        "country" : {
+          "countryId" : 15,
+          "name" : "Mexico"
+        }
+      },
+      "latitude" : 19.4363,
+      "longitude" : -99.072
+    },
+    "price" : 308.29
+  }, {
+    "flightId" : 272,
+    "airline" : {
+      "airlineId" : 15,
+      "name" : "Aeroméxico"
+    },
+    "sourceAirport" : {
+      "airportId" : 15,
+      "name" : "Benito Juarez International Airport",
+      "city" : {
+        "cityId" : 15,
+        "name" : "Mexico City",
+        "country" : {
+          "countryId" : 15,
+          "name" : "Mexico"
+        }
+      },
+      "latitude" : 19.4363,
+      "longitude" : -99.072
+    },
+    "destinationAirport" : {
+      "airportId" : 6,
+      "name" : "Jorge Chávez International Airport",
+      "city" : {
+        "cityId" : 6,
+        "name" : "Lima",
+        "country" : {
+          "countryId" : 6,
+          "name" : "Peru"
+        }
+      },
+      "latitude" : -12.0219,
+      "longitude" : -77.1143
+    },
+    "price" : 299.5
+  } ]
+}

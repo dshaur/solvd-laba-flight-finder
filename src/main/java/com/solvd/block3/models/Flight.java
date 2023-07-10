@@ -1,8 +1,11 @@
 package com.solvd.block3.models;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Java model representing a flight with an ID, airline, source airport, destination airport, and price.
  */
+@XmlRootElement (name="flight")
 public class Flight {
     private int flightId;
     private Airline airline;

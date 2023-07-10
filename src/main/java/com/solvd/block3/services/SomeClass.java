@@ -10,21 +10,21 @@ import java.util.List;
 public class SomeClass {
 	private static final Logger LOGGER = LogManager.getLogger(SomeClass.class);
 	public static void main(String[] args) {
-		// CountryServiceMyBatis cs = new CountryServiceMyBatis();
-		// ArrayList<Country> c = cs.getCountries();
-		// LOGGER.info(c);
+		CountryServiceMyBatis cs = new CountryServiceMyBatis();
+		ArrayList<Country> c = cs.getCountries();
+		LOGGER.info(c);
 
-		// CityServiceMyBatis ci = new CityServiceMyBatis();
-		// City city = ci.getCity(4);
-		// LOGGER.info(city);
+		CityServiceMyBatis ci = new CityServiceMyBatis();
+		City city = ci.getCity(4);
+		LOGGER.info(city);
 
-		// AirportServiceMyBatis as = new AirportServiceMyBatis();
-		// Airport airport = as.getAirport(4);
-		// LOGGER.info(airport);
+		AirportServiceMyBatis as = new AirportServiceMyBatis();
+		Airport airport = as.getAirport(4);
+		LOGGER.info(airport);
 
-		// AirlineServiceMyBatis asl = new AirlineServiceMyBatis();
-		// Airline airline = asl.getAirline(2);
-		// LOGGER.info(airline);
+		AirlineServiceMyBatis asl = new AirlineServiceMyBatis();
+		Airline airline = asl.getAirline(2);
+		LOGGER.info(airline);
 
 //		FlightServiceMyBatis fs = new FlightServiceMyBatis();
 //		Flight flights = fs.getFlight(1);

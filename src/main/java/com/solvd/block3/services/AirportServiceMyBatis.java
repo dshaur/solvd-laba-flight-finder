@@ -2,7 +2,7 @@ package com.solvd.block3.services;
 
 import com.solvd.block3.interfaces.IAirportService;
 import com.solvd.block3.mappers.AirportMapper;
-import com.solvd.block3.models.Airport;
+import com.solvd.block3.models.*;
 import com.solvd.block3.utilities.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -25,6 +25,16 @@ public class AirportServiceMyBatis implements IAirportService {
         try (SqlSession session = SessionUtil.openSession()) {
             airportMapper = session.getMapper(AirportMapper.class);
             return airportMapper.selectAirportByName(name);
+        }
+    }
+
+    public Airport getAirportByCity(City city)
+    {
+        try (SqlSession session = SessionUtil.openSession()) 
+        {
+            airportMapper = session.getMapper(AirportMapper.class);
+            Airport airport = airportMapper.selectAirportByCity(city);
+            return airport;
         }
     }
 

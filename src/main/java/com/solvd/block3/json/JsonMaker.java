@@ -15,7 +15,7 @@ public class JsonMaker
     {
         try
         {
-            MAPPER.writeValue(new File(pathOfFile), toParse);   
+            MAPPER.writerWithDefaultPrettyPrinter().writeValue(new File(pathOfFile), toParse);   
         }
 
         catch (IOException e)

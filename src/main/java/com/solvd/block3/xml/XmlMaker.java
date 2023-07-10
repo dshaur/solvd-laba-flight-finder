@@ -17,12 +17,13 @@ public class XmlMaker
         {
             JAXBContext context = JAXBContext.newInstance(toParse.getClass());
             Marshaller marshaller = context.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             marshaller.marshal(toParse, new File(path));
         }
 
         catch (JAXBException e)
         {
-            LOGGER.error(e.getMessage());
+            LOGGER.error(e);
         }
     }
 }

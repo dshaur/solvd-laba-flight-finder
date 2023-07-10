@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:include schemaLocation="City.xsd"/>
+    <xs:element name="airport" type="airport">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="airportId" type="xs:integer"/>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="city" type="city"/>
+                <xs:element name="latitude" type="xs:decimal"/>
+                <xs:element name="longitude" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
