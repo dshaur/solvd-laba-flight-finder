@@ -115,7 +115,7 @@ public class UiUtils
         airportIds.add(sourceApId);
         airportIds.add(destApId);
 
-        return findFlights(airportIds).get(0);       
+        return findFlightsByAirportIds(airportIds).get(0);       
     }
 
     public static List<Flight> findCheapestPathFlights(City source, City dest)
@@ -125,10 +125,10 @@ public class UiUtils
 
         List<Integer> airportIds = FLIGHT_SERVICE.findShortestPath(sourceApId, destApId);
 
-        return findFlights(airportIds);
+        return findFlightsByAirportIds(airportIds);
     }
 
-    private static List<Flight> findFlights(List<Integer> airportIds)
+    private static List<Flight> findFlightsByAirportIds(List<Integer> airportIds)
     {
         List<Flight> ret = new ArrayList<Flight>();
         for (int i = 0; i < airportIds.size(); i += 2)

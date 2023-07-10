@@ -2,11 +2,9 @@ package com.solvd.block3.business_logic;
 
 import com.solvd.block3.ui.UiUtils;
 import com.solvd.block3.xml.XmlMaker;
-
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import com.solvd.block3.json.JsonMaker;
 import com.solvd.block3.models.*;
 
@@ -42,7 +40,7 @@ public class Main {
         {
             LOGGER.info("Finding cheapest path...");
             List<Flight> flightsOfCheapest = UiUtils.findCheapestPathFlights(origin, destination);
-            
+
             LOGGER.info("Flights to get to " + destination.getName() + " from " + origin.getName());
             flightsOfCheapest.forEach(flight ->
             {
