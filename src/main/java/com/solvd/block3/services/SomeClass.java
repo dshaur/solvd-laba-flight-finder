@@ -1,16 +1,15 @@
 package com.solvd.block3.services;
 
-import com.solvd.block3.graphs.Graph;
-import com.solvd.block3.models.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class SomeClass {
-	private static final Logger LOGGER = LogManager.getLogger(SomeClass.class);
-	public static void main(String[] args) {
-		CountryServiceMyBatis cs = new CountryServiceMyBatis();
+    private static final Logger LOGGER = LogManager.getLogger(SomeClass.class);
+
+    public static void main(String[] args) {
+/*		CountryServiceMyBatis cs = new CountryServiceMyBatis();
 		ArrayList<Country> c = cs.getCountries();
 		LOGGER.info(c);
 
@@ -24,13 +23,11 @@ public class SomeClass {
 
 		AirlineServiceMyBatis asl = new AirlineServiceMyBatis();
 		Airline airline = asl.getAirline(2);
-		LOGGER.info(airline);
+		LOGGER.info(airline);*/
 
 //		FlightServiceMyBatis fs = new FlightServiceMyBatis();
 //		Flight flights = fs.getFlight(1);
 //		LOGGER.info(flights);
-
-
 
 
 //		Graph graph = new Graph();
@@ -53,8 +50,8 @@ public class SomeClass {
 //			LOGGER.info(shortestPath);
 //		}
 
-		FlightServiceMyBatis fs = new FlightServiceMyBatis();
-		List<Integer> flights = fs.findShortestPath(2, 6);
-		LOGGER.info(flights);
-	}
+        FlightServiceMyBatis fs = new FlightServiceMyBatis();
+        List<Integer> flights = fs.findShortestPath(2, 6);
+        LOGGER.info(flights);
+    }
 }
