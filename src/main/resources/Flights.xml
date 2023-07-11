@@ -1,149 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<flightList>
-    <flights>
-        <flight>
-            <airline>
-                <airlineId>17</airlineId>
-                <name>Iberia</name>
-            </airline>
-            <destinationAirport>
-                <airportId>18</airportId>
-                <city>
-                    <cityId>18</cityId>
-                    <country>
-                        <countryId>18</countryId>
-                        <name>Turkey</name>
-                    </country>
-                    <name>Istanbul</name>
-                </city>
-                <latitude>40.9767</latitude>
-                <longitude>28.815</longitude>
-                <name>Istanbul Atatürk Airport</name>
-            </destinationAirport>
-            <flightId>321</flightId>
-            <price>271.33</price>
-            <sourceAirport>
-                <airportId>17</airportId>
-                <city>
-                    <cityId>17</cityId>
-                    <country>
-                        <countryId>17</countryId>
-                        <name>Spain</name>
-                    </country>
-                    <name>Madrid</name>
-                </city>
-                <latitude>40.471</latitude>
-                <longitude>-3.5626</longitude>
-                <name>Adolfo Suárez Madrid–Barajas Airport</name>
-            </sourceAirport>
-        </flight>
-        <flight>
-            <airline>
-                <airlineId>18</airlineId>
-                <name>Turkish Airlines</name>
-            </airline>
-            <destinationAirport>
-                <airportId>12</airportId>
-                <city>
-                    <cityId>12</cityId>
-                    <country>
-                        <countryId>12</countryId>
-                        <name>India</name>
-                    </country>
-                    <name>Mumbai</name>
-                </city>
-                <latitude>19.0887</latitude>
-                <longitude>72.8679</longitude>
-                <name>Chhatrapati Shivaji Maharaj International Airport</name>
-            </destinationAirport>
-            <flightId>335</flightId>
-            <price>481.99</price>
-            <sourceAirport>
-                <airportId>18</airportId>
-                <city>
-                    <cityId>18</cityId>
-                    <country>
-                        <countryId>18</countryId>
-                        <name>Turkey</name>
-                    </country>
-                    <name>Istanbul</name>
-                </city>
-                <latitude>40.9767</latitude>
-                <longitude>28.815</longitude>
-                <name>Istanbul Atatürk Airport</name>
-            </sourceAirport>
-        </flight>
-        <flight>
-            <airline>
-                <airlineId>12</airlineId>
-                <name>Air India</name>
-            </airline>
-            <destinationAirport>
-                <airportId>9</airportId>
-                <city>
-                    <cityId>9</cityId>
-                    <country>
-                        <countryId>9</countryId>
-                        <name>China</name>
-                    </country>
-                    <name>Beijing</name>
-                </city>
-                <latitude>40.0799</latitude>
-                <longitude>116.6031</longitude>
-                <name>Beijing Capital International Airport</name>
-            </destinationAirport>
-            <flightId>218</flightId>
-            <price>476.59</price>
-            <sourceAirport>
-                <airportId>12</airportId>
-                <city>
-                    <cityId>12</cityId>
-                    <country>
-                        <countryId>12</countryId>
-                        <name>India</name>
-                    </country>
-                    <name>Mumbai</name>
-                </city>
-                <latitude>19.0887</latitude>
-                <longitude>72.8679</longitude>
-                <name>Chhatrapati Shivaji Maharaj International Airport</name>
-            </sourceAirport>
-        </flight>
-        <flight>
-            <airline>
-                <airlineId>9</airlineId>
-                <name>Air China</name>
-            </airline>
-            <destinationAirport>
-                <airportId>19</airportId>
-                <city>
-                    <cityId>19</cityId>
-                    <country>
-                        <countryId>19</countryId>
-                        <name>Japan</name>
-                    </country>
-                    <name>Tokyo</name>
-                </city>
-                <latitude>35.5494</latitude>
-                <longitude>139.7798</longitude>
-                <name>Tokyo Haneda Airport</name>
-            </destinationAirport>
-            <flightId>170</flightId>
-            <price>209.08</price>
-            <sourceAirport>
-                <airportId>9</airportId>
-                <city>
-                    <cityId>9</cityId>
-                    <country>
-                        <countryId>9</countryId>
-                        <name>China</name>
-                    </country>
-                    <name>Beijing</name>
-                </city>
-                <latitude>40.0799</latitude>
-                <longitude>116.6031</longitude>
-                <name>Beijing Capital International Airport</name>
-            </sourceAirport>
-        </flight>
-    </flights>
-</flightList>
+<flight>
+    <airline>
+        <airlineId>10</airlineId>
+        <name>LATAM Airlines Brasil</name>
+    </airline>
+    <destinationAirport>
+        <airportId>19</airportId>
+        <city>
+            <cityId>19</cityId>
+            <country>
+                <countryId>19</countryId>
+                <name>Japan</name>
+            </country>
+            <name>Tokyo</name>
+        </city>
+        <latitude>35.5494</latitude>
+        <longitude>139.7798</longitude>
+        <name>Tokyo Haneda Airport</name>
+    </destinationAirport>
+    <flightId>189</flightId>
+    <price>2553.93</price>
+    <sourceAirport>
+        <airportId>10</airportId>
+        <city>
+            <cityId>10</cityId>
+            <country>
+                <countryId>10</countryId>
+                <name>Brazil</name>
+            </country>
+            <name>São Paulo</name>
+        </city>
+        <latitude>-23.4356</latitude>
+        <longitude>-46.4731</longitude>
+        <name>Guarulhos International Airport</name>
+    </sourceAirport>
+</flight>

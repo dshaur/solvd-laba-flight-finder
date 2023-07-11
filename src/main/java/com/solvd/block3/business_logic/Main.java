@@ -1,12 +1,16 @@
 package com.solvd.block3.business_logic;
 
+import com.solvd.block3.json.JsonMaker;
+import com.solvd.block3.models.City;
+import com.solvd.block3.models.Flight;
+import com.solvd.block3.models.FlightList;
 import com.solvd.block3.ui.UiUtils;
 import com.solvd.block3.xml.XmlMaker;
-import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.solvd.block3.json.JsonMaker;
-import com.solvd.block3.models.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     private static final String XML_PATH = "src/main/resources/Flights.xml";
@@ -23,37 +27,29 @@ public class Main {
         City destination = UiUtils.selectCity();
         LOGGER.info("Selected destination city: " + destination.getName());
 
-        if (origin.getName().equals(destination.getName()))
-        {
-            LOGGER.info("Cities are the same. Closing program.");
-            System.exit(0);
+        while (origin.getName().equals(destination.getName())) {
+            LOGGER.info("Cities are the same. Please use a city that is not " + origin.getName());
+            destination = UiUtils.selectCity();
         }
 
         String mode = UiUtils.getMode();
 
-        if (mode.equalsIgnoreCase("s"))
-        {
-            LOGGER.info("The shortest path is a direct one. Getting info...");
+        if (mode.equalsIgnoreCase("s")) {
+            LOGGER.info("The shortest flight route is a direct one with no stops. Getting info...");
             Flight shortest = UiUtils.findShortestFlight(origin, destination);
+            List<Flight> singleFlight = new ArrayList<Flight>();
+            singleFlight.add(shortest);
+            UiUtils.printFlightDirections(singleFlight);
 
-            LOGGER.info("Information about the flight:");
-            LOGGER.info(shortest);
             XmlMaker.makeXml(XML_PATH, shortest);
             JsonMaker.makeJson(JSON_PATH, shortest);
-        }
-
-        else if (mode.equalsIgnoreCase("c"))
-        {
-            LOGGER.info("Finding cheapest path...");
+        } else if (mode.equalsIgnoreCase("c")) {
+            LOGGER.info("Finding cheapest flight route...");
             List<Flight> flightsOfCheapest = UiUtils.findCheapestPathFlights(origin, destination);
 
-            LOGGER.info("Flights to get to " + destination.getName() + " from " + origin.getName());
-            flightsOfCheapest.forEach(flight ->
-            {
-                LOGGER.info(flight);
-            });
-            FlightList list = new FlightList(flightsOfCheapest);
+            UiUtils.printFlightDirections(flightsOfCheapest);
 
+            FlightList list = new FlightList(flightsOfCheapest);
             XmlMaker.makeXml(XML_PATH, list);
             JsonMaker.makeJson(JSON_PATH, list);
         }
