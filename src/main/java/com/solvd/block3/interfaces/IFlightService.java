@@ -22,5 +22,5 @@ public interface IFlightService {
 
     void deleteFlight(Flight flight);
 
-    List<Integer> findShortestPath(int sourceAirportId, int destinationAirportId);
+    List<Integer> findShortestPath(int sourceAirportId, int destinationAirportId, boolean useDistance);
 }

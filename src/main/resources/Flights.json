@@ -1,6 +1,41 @@
 {
   "flights" : [ {
-    "flightId" : 195,
+    "flightId" : 153,
+    "airline" : {
+      "airlineId" : 11,
+      "name" : "Air Canada"
+    },
+    "sourceAirport" : {
+      "airportId" : 11,
+      "name" : "Toronto Pearson International Airport",
+      "city" : {
+        "cityId" : 11,
+        "name" : "Toronto",
+        "country" : {
+          "countryId" : 11,
+          "name" : "Canada"
+        }
+      },
+      "latitude" : 43.6777,
+      "longitude" : -79.6248
+    },
+    "destinationAirport" : {
+      "airportId" : 14,
+      "name" : "Amsterdam Airport Schiphol",
+      "city" : {
+        "cityId" : 14,
+        "name" : "Amsterdam",
+        "country" : {
+          "countryId" : 14,
+          "name" : "Netherlands"
+        }
+      },
+      "latitude" : 52.3105,
+      "longitude" : 4.7683
+    },
+    "price" : 598.94
+  }, {
+    "flightId" : 201,
     "airline" : {
       "airlineId" : 14,
       "name" : "KLM Royal Dutch Airlines"
@@ -20,19 +55,89 @@
       "longitude" : 4.7683
     },
     "destinationAirport" : {
-      "airportId" : 7,
-      "name" : "Charles de Gaulle Airport",
+      "airportId" : 13,
+      "name" : "Sheremetyevo International Airport",
       "city" : {
-        "cityId" : 7,
-        "name" : "Paris",
+        "cityId" : 13,
+        "name" : "Moscow",
         "country" : {
-          "countryId" : 7,
-          "name" : "France"
+          "countryId" : 13,
+          "name" : "Russia"
         }
       },
-      "latitude" : 49.0097,
-      "longitude" : 2.5479
+      "latitude" : 55.9726,
+      "longitude" : 37.4144
     },
-    "price" : 39.9
+    "price" : 214.4
+  }, {
+    "flightId" : 179,
+    "airline" : {
+      "airlineId" : 13,
+      "name" : "Aeroflot"
+    },
+    "sourceAirport" : {
+      "airportId" : 13,
+      "name" : "Sheremetyevo International Airport",
+      "city" : {
+        "cityId" : 13,
+        "name" : "Moscow",
+        "country" : {
+          "countryId" : 13,
+          "name" : "Russia"
+        }
+      },
+      "latitude" : 55.9726,
+      "longitude" : 37.4144
+    },
+    "destinationAirport" : {
+      "airportId" : 9,
+      "name" : "Beijing Capital International Airport",
+      "city" : {
+        "cityId" : 9,
+        "name" : "Beijing",
+        "country" : {
+          "countryId" : 9,
+          "name" : "China"
+        }
+      },
+      "latitude" : 40.0799,
+      "longitude" : 116.6031
+    },
+    "price" : 579.62
+  }, {
+    "flightId" : 119,
+    "airline" : {
+      "airlineId" : 9,
+      "name" : "Air China"
+    },
+    "sourceAirport" : {
+      "airportId" : 9,
+      "name" : "Beijing Capital International Airport",
+      "city" : {
+        "cityId" : 9,
+        "name" : "Beijing",
+        "country" : {
+          "countryId" : 9,
+          "name" : "China"
+        }
+      },
+      "latitude" : 40.0799,
+      "longitude" : 116.6031
+    },
+    "destinationAirport" : {
+      "airportId" : 5,
+      "name" : "Sydney Airport",
+      "city" : {
+        "cityId" : 5,
+        "name" : "Sydney",
+        "country" : {
+          "countryId" : 5,
+          "name" : "Australia"
+        }
+      },
+      "latitude" : -33.9461,
+      "longitude" : 151.1772
+    },
+    "price" : 1246.38
   } ]
 }

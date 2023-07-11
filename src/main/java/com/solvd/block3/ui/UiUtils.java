@@ -107,22 +107,11 @@ public class UiUtils {
     }
 
 
-    public static Flight findShortestFlight(City source, City dest) {
+    public static List<Flight> findBestFlights(City source, City dest, boolean useDistance) {
         int sourceApId = AIRPORT_SERVICE.getAirportByCity(source).getAirportId();
         int destApId = AIRPORT_SERVICE.getAirportByCity(dest).getAirportId();
 
-        List<Integer> airportIds = new ArrayList<Integer>();
-        airportIds.add(sourceApId);
-        airportIds.add(destApId);
-
-        return findFlightsByAirportIds(airportIds).get(0);
-    }
-
-    public static List<Flight> findCheapestPathFlights(City source, City dest) {
-        int sourceApId = AIRPORT_SERVICE.getAirportByCity(source).getAirportId();
-        int destApId = AIRPORT_SERVICE.getAirportByCity(dest).getAirportId();
-
-        List<Integer> airportIds = FLIGHT_SERVICE.findShortestPath(sourceApId, destApId);
+        List<Integer> airportIds = FLIGHT_SERVICE.findShortestPath(sourceApId, destApId, useDistance);
 
         return findFlightsByAirportIds(airportIds);
     }
