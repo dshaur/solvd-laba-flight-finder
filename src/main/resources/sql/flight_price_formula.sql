@@ -7,8 +7,8 @@ SET f.price = (ROUND(0.1 * (6371 * 2 * ASIN(SQRT(POWER(SIN((RADIANS(a.latitude) 
               CASE
                 WHEN (6371 * 2 * ASIN(SQRT(POWER(SIN((RADIANS(a.latitude) - RADIANS(b.latitude)) / 2), 2) + COS(RADIANS(a.latitude)) * COS(RADIANS(b.latitude)) * POWER(SIN((RADIANS(a.longitude) - RADIANS(b.longitude)) / 2), 2)))) > 6000 THEN
                   CASE
-                    WHEN (6371 * 2 * ASIN(SQRT(POWER(SIN((RADIANS(a.latitude) - RADIANS(b.latitude)) / 2), 2) + COS(RADIANS(a.latitude)) * COS(RADIANS(b.latitude)) * POWER(SIN((RADIANS(a.longitude) - RADIANS(b.longitude)) / 2), 2)))) > 9000 THEN f.price + 1500
-                    ELSE f.price + 1000
+                    WHEN (6371 * 2 * ASIN(SQRT(POWER(SIN((RADIANS(a.latitude) - RADIANS(b.latitude)) / 2), 2) + COS(RADIANS(a.latitude)) * COS(RADIANS(b.latitude)) * POWER(SIN((RADIANS(a.longitude) - RADIANS(b.longitude)) / 2), 2)))) > 9000 THEN f.price + 700
+                    ELSE f.price + 350
                   END
                 ELSE f.price
               END);

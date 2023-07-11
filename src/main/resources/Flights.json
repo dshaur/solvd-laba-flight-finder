@@ -1,36 +1,38 @@
 {
-  "flightId" : 189,
-  "airline" : {
-    "airlineId" : 10,
-    "name" : "LATAM Airlines Brasil"
-  },
-  "sourceAirport" : {
-    "airportId" : 10,
-    "name" : "Guarulhos International Airport",
-    "city" : {
-      "cityId" : 10,
-      "name" : "São Paulo",
-      "country" : {
-        "countryId" : 10,
-        "name" : "Brazil"
-      }
+  "flights" : [ {
+    "flightId" : 195,
+    "airline" : {
+      "airlineId" : 14,
+      "name" : "KLM Royal Dutch Airlines"
     },
-    "latitude" : -23.4356,
-    "longitude" : -46.4731
-  },
-  "destinationAirport" : {
-    "airportId" : 19,
-    "name" : "Tokyo Haneda Airport",
-    "city" : {
-      "cityId" : 19,
-      "name" : "Tokyo",
-      "country" : {
-        "countryId" : 19,
-        "name" : "Japan"
-      }
+    "sourceAirport" : {
+      "airportId" : 14,
+      "name" : "Amsterdam Airport Schiphol",
+      "city" : {
+        "cityId" : 14,
+        "name" : "Amsterdam",
+        "country" : {
+          "countryId" : 14,
+          "name" : "Netherlands"
+        }
+      },
+      "latitude" : 52.3105,
+      "longitude" : 4.7683
     },
-    "latitude" : 35.5494,
-    "longitude" : 139.7798
-  },
-  "price" : 2553.93
+    "destinationAirport" : {
+      "airportId" : 7,
+      "name" : "Charles de Gaulle Airport",
+      "city" : {
+        "cityId" : 7,
+        "name" : "Paris",
+        "country" : {
+          "countryId" : 7,
+          "name" : "France"
+        }
+      },
+      "latitude" : 49.0097,
+      "longitude" : 2.5479
+    },
+    "price" : 39.9
+  } ]
 }

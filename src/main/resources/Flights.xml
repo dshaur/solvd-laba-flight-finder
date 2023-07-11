@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<flight>
-    <airline>
-        <airlineId>10</airlineId>
-        <name>LATAM Airlines Brasil</name>
-    </airline>
-    <destinationAirport>
-        <airportId>19</airportId>
-        <city>
-            <cityId>19</cityId>
-            <country>
-                <countryId>19</countryId>
-                <name>Japan</name>
-            </country>
-            <name>Tokyo</name>
-        </city>
-        <latitude>35.5494</latitude>
-        <longitude>139.7798</longitude>
-        <name>Tokyo Haneda Airport</name>
-    </destinationAirport>
-    <flightId>189</flightId>
-    <price>2553.93</price>
-    <sourceAirport>
-        <airportId>10</airportId>
-        <city>
-            <cityId>10</cityId>
-            <country>
-                <countryId>10</countryId>
-                <name>Brazil</name>
-            </country>
-            <name>São Paulo</name>
-        </city>
-        <latitude>-23.4356</latitude>
-        <longitude>-46.4731</longitude>
-        <name>Guarulhos International Airport</name>
-    </sourceAirport>
-</flight>
+<flightList>
+    <flights>
+        <flight>
+            <airline>
+                <airlineId>14</airlineId>
+                <name>KLM Royal Dutch Airlines</name>
+            </airline>
+            <destinationAirport>
+                <airportId>7</airportId>
+                <city>
+                    <cityId>7</cityId>
+                    <country>
+                        <countryId>7</countryId>
+                        <name>France</name>
+                    </country>
+                    <name>Paris</name>
+                </city>
+                <latitude>49.0097</latitude>
+                <longitude>2.5479</longitude>
+                <name>Charles de Gaulle Airport</name>
+            </destinationAirport>
+            <flightId>195</flightId>
+            <price>39.9</price>
+            <sourceAirport>
+                <airportId>14</airportId>
+                <city>
+                    <cityId>14</cityId>
+                    <country>
+                        <countryId>14</countryId>
+                        <name>Netherlands</name>
+                    </country>
+                    <name>Amsterdam</name>
+                </city>
+                <latitude>52.3105</latitude>
+                <longitude>4.7683</longitude>
+                <name>Amsterdam Airport Schiphol</name>
+            </sourceAirport>
+        </flight>
+    </flights>
+</flightList>

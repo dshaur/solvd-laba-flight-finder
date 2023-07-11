@@ -35,7 +35,7 @@ public class Main {
         String mode = UiUtils.getMode();
 
         if (mode.equalsIgnoreCase("s")) {
-            LOGGER.info("The shortest flight route is a direct one with no stops. Getting info...");
+            LOGGER.info("Finding shortest flight route...");
             Flight shortest = UiUtils.findShortestFlight(origin, destination);
             List<Flight> singleFlight = new ArrayList<Flight>();
             singleFlight.add(shortest);
