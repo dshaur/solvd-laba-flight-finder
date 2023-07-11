@@ -1,13 +1,16 @@
 package com.solvd.block3.business_logic;
 
+import com.solvd.block3.json.JsonMaker;
+import com.solvd.block3.models.City;
+import com.solvd.block3.models.Flight;
+import com.solvd.block3.models.FlightList;
 import com.solvd.block3.ui.UiUtils;
 import com.solvd.block3.xml.XmlMaker;
-import java.util.ArrayList;
-import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.solvd.block3.json.JsonMaker;
-import com.solvd.block3.models.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     private static final String XML_PATH = "src/main/resources/Flights.xml";
@@ -24,17 +27,15 @@ public class Main {
         City destination = UiUtils.selectCity();
         LOGGER.info("Selected destination city: " + destination.getName());
 
-        while (origin.getName().equals(destination.getName()))
-        {
+        while (origin.getName().equals(destination.getName())) {
             LOGGER.info("Cities are the same. Please use a city that is not " + origin.getName());
             destination = UiUtils.selectCity();
         }
 
         String mode = UiUtils.getMode();
 
-        if (mode.equalsIgnoreCase("s"))
-        {
-            LOGGER.info("The shortest path is a direct one. Getting info...");
+        if (mode.equalsIgnoreCase("s")) {
+            LOGGER.info("The shortest flight route is a direct one with no stops. Getting info...");
             Flight shortest = UiUtils.findShortestFlight(origin, destination);
             List<Flight> singleFlight = new ArrayList<Flight>();
             singleFlight.add(shortest);
@@ -42,11 +43,8 @@ public class Main {
 
             XmlMaker.makeXml(XML_PATH, shortest);
             JsonMaker.makeJson(JSON_PATH, shortest);
-        }
-
-        else if (mode.equalsIgnoreCase("c"))
-        {
-            LOGGER.info("Finding cheapest path...");
+        } else if (mode.equalsIgnoreCase("c")) {
+            LOGGER.info("Finding cheapest flight route...");
             List<Flight> flightsOfCheapest = UiUtils.findCheapestPathFlights(origin, destination);
 
             UiUtils.printFlightDirections(flightsOfCheapest);

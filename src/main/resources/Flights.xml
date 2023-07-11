@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <flight>
     <airline>
-        <airlineId>1</airlineId>
-        <name>Korean Air</name>
+        <airlineId>10</airlineId>
+        <name>LATAM Airlines Brasil</name>
     </airline>
     <destinationAirport>
-        <airportId>2</airportId>
+        <airportId>19</airportId>
         <city>
-            <cityId>2</cityId>
+            <cityId>19</cityId>
             <country>
-                <countryId>2</countryId>
-                <name>United States</name>
+                <countryId>19</countryId>
+                <name>Japan</name>
             </country>
-            <name>Denver</name>
+            <name>Tokyo</name>
         </city>
-        <latitude>39.8561</latitude>
-        <longitude>-104.6737</longitude>
-        <name>Denver International Airport</name>
+        <latitude>35.5494</latitude>
+        <longitude>139.7798</longitude>
+        <name>Tokyo Haneda Airport</name>
     </destinationAirport>
-    <flightId>1</flightId>
-    <price>3992.28</price>
+    <flightId>189</flightId>
+    <price>2553.93</price>
     <sourceAirport>
-        <airportId>1</airportId>
+        <airportId>10</airportId>
         <city>
-            <cityId>1</cityId>
+            <cityId>10</cityId>
             <country>
-                <countryId>1</countryId>
-                <name>South Korea</name>
+                <countryId>10</countryId>
+                <name>Brazil</name>
             </country>
-            <name>Seoul</name>
+            <name>São Paulo</name>
         </city>
-        <latitude>37.4602</latitude>
-        <longitude>126.4407</longitude>
-        <name>Incheon International Airport</name>
+        <latitude>-23.4356</latitude>
+        <longitude>-46.4731</longitude>
+        <name>Guarulhos International Airport</name>
     </sourceAirport>
 </flight>

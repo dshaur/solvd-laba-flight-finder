@@ -1,36 +1,36 @@
 {
-  "flightId" : 1,
+  "flightId" : 189,
   "airline" : {
-    "airlineId" : 1,
-    "name" : "Korean Air"
+    "airlineId" : 10,
+    "name" : "LATAM Airlines Brasil"
   },
   "sourceAirport" : {
-    "airportId" : 1,
-    "name" : "Incheon International Airport",
+    "airportId" : 10,
+    "name" : "Guarulhos International Airport",
     "city" : {
-      "cityId" : 1,
-      "name" : "Seoul",
+      "cityId" : 10,
+      "name" : "São Paulo",
       "country" : {
-        "countryId" : 1,
-        "name" : "South Korea"
+        "countryId" : 10,
+        "name" : "Brazil"
       }
     },
-    "latitude" : 37.4602,
-    "longitude" : 126.4407
+    "latitude" : -23.4356,
+    "longitude" : -46.4731
   },
   "destinationAirport" : {
-    "airportId" : 2,
-    "name" : "Denver International Airport",
+    "airportId" : 19,
+    "name" : "Tokyo Haneda Airport",
     "city" : {
-      "cityId" : 2,
-      "name" : "Denver",
+      "cityId" : 19,
+      "name" : "Tokyo",
       "country" : {
-        "countryId" : 2,
-        "name" : "United States"
+        "countryId" : 19,
+        "name" : "Japan"
       }
     },
-    "latitude" : 39.8561,
-    "longitude" : -104.6737
+    "latitude" : 35.5494,
+    "longitude" : 139.7798
   },
-  "price" : 3992.28
+  "price" : 2553.93
 }

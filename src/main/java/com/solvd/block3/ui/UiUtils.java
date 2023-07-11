@@ -1,21 +1,18 @@
 package com.solvd.block3.ui;
 
-import java.util.List;
-import java.util.Scanner;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import com.solvd.block3.models.City;
 import com.solvd.block3.models.Flight;
 import com.solvd.block3.services.AirportServiceMyBatis;
 import com.solvd.block3.services.CityServiceMyBatis;
 import com.solvd.block3.services.FlightServiceMyBatis;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.text.DecimalFormat;
+import java.util.*;
 import java.util.regex.Pattern;
 
-public class UiUtils 
-{    
+public class UiUtils {
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final Logger LOGGER = LogManager.getLogger(UiUtils.class);
     private static final Map<String, String> CITY_MAP = createCityMap();
@@ -23,6 +20,8 @@ public class UiUtils
     private static final CityServiceMyBatis CITY_SERVICE = new CityServiceMyBatis();
     private static final AirportServiceMyBatis AIRPORT_SERVICE = new AirportServiceMyBatis();
     private static final FlightServiceMyBatis FLIGHT_SERVICE = new FlightServiceMyBatis();
+
+    private static final DecimalFormat df = new DecimalFormat("0.00"); // Round to 2 decimal places for display
 
     private static Map<String, String> createCityMap() {
         Map<String, String> cityMap = new LinkedHashMap<>();
@@ -92,22 +91,23 @@ public class UiUtils
     }
 
 
-    public static String getMode()
-    {
-        LOGGER.info("Enter 's' to get the shortest path or 'c' for the cheapest");
+    public static String getMode() {
+        LOGGER.info("Enter 's' to get the shortest route or 'c' for the cheapest");
         String mode = SCANNER.nextLine().trim();
-        while (!mode.equalsIgnoreCase("s") && !mode.equalsIgnoreCase("c"))
-        {
-            LOGGER.info("Invalid input.");
-            LOGGER.info("Enter 's' to get the shortest path or 'c' for the cheapest");  
-            mode = SCANNER.nextLine().trim();
-        }
 
-        return mode;
+        // Use regex to match variations of input
+        if (Pattern.matches("(?i)^s(hort(est)?)?$", mode)) {
+            return "s";
+        } else if (Pattern.matches("(?i)^c(heap(est)?)?$", mode)) {
+            return "c";
+        } else {
+            LOGGER.info("Invalid input. Try again.");
+            return getMode(); // Recursive call to re-prompt for valid input
+        }
     }
 
-    public static Flight findShortestFlight(City source, City dest)
-    {
+
+    public static Flight findShortestFlight(City source, City dest) {
         int sourceApId = AIRPORT_SERVICE.getAirportByCity(source).getAirportId();
         int destApId = AIRPORT_SERVICE.getAirportByCity(dest).getAirportId();
 
@@ -115,11 +115,10 @@ public class UiUtils
         airportIds.add(sourceApId);
         airportIds.add(destApId);
 
-        return findFlightsByAirportIds(airportIds).get(0);       
+        return findFlightsByAirportIds(airportIds).get(0);
     }
 
-    public static List<Flight> findCheapestPathFlights(City source, City dest)
-    {
+    public static List<Flight> findCheapestPathFlights(City source, City dest) {
         int sourceApId = AIRPORT_SERVICE.getAirportByCity(source).getAirportId();
         int destApId = AIRPORT_SERVICE.getAirportByCity(dest).getAirportId();
 
@@ -128,44 +127,42 @@ public class UiUtils
         return findFlightsByAirportIds(airportIds);
     }
 
-    private static List<Flight> findFlightsByAirportIds(List<Integer> airportIds)
-    {
+    private static List<Flight> findFlightsByAirportIds(List<Integer> airportIds) {
         List<Flight> ret = new ArrayList<Flight>();
 
-        for (int i = 0; i < airportIds.size() - 1; i++)
-        {
+        for (int i = 0; i < airportIds.size() - 1; i++) {
             ArrayList<Flight> sourceFlights = FLIGHT_SERVICE.getFlightBySourceAirport(airportIds.get(i));
-            for(Flight flight : sourceFlights)
-            {
-                if (flight.getDestinationAirport().getAirportId() == airportIds.get(i + 1))
-                {
+            for (Flight flight : sourceFlights) {
+                if (flight.getDestinationAirport().getAirportId() == airportIds.get(i + 1)) {
                     ret.add(flight);
                 }
             }
         }
-        
+
         return ret;
     }
 
-    public static void printFlightDirections(List<Flight> flights)
-    {
-        double totalPrice = 0.0;
-        LOGGER.info("Directions:");
-        for (Flight flight : flights) 
-        {
-            LOGGER.info(
-                "Take flight " + 
-                flight.getAirline().getName() + 
-                " from " + 
-                flight.getSourceAirport().getName() +
-                " to " +
-                flight.getDestinationAirport().getName());
+    public static void printFlightDirections(List<Flight> flights) {
 
-            totalPrice += flight.getPrice(); 
+        double totalPrice = 0.0; // total price
+
+        LOGGER.info("Directions:");
+        for (Flight flight : flights) {
+            LOGGER.info(
+                    "Take flight " +
+                            flight.getAirline().getName() + " " +
+                            flight.getFlightId() +
+                            " from " +
+                            flight.getSourceAirport().getName() + " " + "(" + flight.getSourceAirport().getCity().getName() + ")" +
+                            " to " +
+                            flight.getDestinationAirport().getName() + " " + "(" + flight.getDestinationAirport().getCity().getName() + ")");
+
+            totalPrice += flight.getPrice();
+
         }
 
         LOGGER.info("Arrived at final destination.");
-        LOGGER.info("Total price: " + totalPrice);
+        LOGGER.info("Total price: $" + df.format(totalPrice));
     }
 
 }
