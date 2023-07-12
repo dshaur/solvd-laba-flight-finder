@@ -3,25 +3,61 @@
     <flights>
         <flight>
             <airline>
+                <airlineId>11</airlineId>
+                <name>Air Canada</name>
+            </airline>
+            <destinationAirport>
+                <airportId>14</airportId>
+                <city>
+                    <cityId>14</cityId>
+                    <country>
+                        <countryId>14</countryId>
+                        <name>Netherlands</name>
+                    </country>
+                    <name>Amsterdam</name>
+                </city>
+                <latitude>52.3105</latitude>
+                <longitude>4.7683</longitude>
+                <name>Amsterdam Airport Schiphol</name>
+            </destinationAirport>
+            <flightId>153</flightId>
+            <price>598.94</price>
+            <sourceAirport>
+                <airportId>11</airportId>
+                <city>
+                    <cityId>11</cityId>
+                    <country>
+                        <countryId>11</countryId>
+                        <name>Canada</name>
+                    </country>
+                    <name>Toronto</name>
+                </city>
+                <latitude>43.6777</latitude>
+                <longitude>-79.6248</longitude>
+                <name>Toronto Pearson International Airport</name>
+            </sourceAirport>
+        </flight>
+        <flight>
+            <airline>
                 <airlineId>14</airlineId>
                 <name>KLM Royal Dutch Airlines</name>
             </airline>
             <destinationAirport>
-                <airportId>7</airportId>
+                <airportId>13</airportId>
                 <city>
-                    <cityId>7</cityId>
+                    <cityId>13</cityId>
                     <country>
-                        <countryId>7</countryId>
-                        <name>France</name>
+                        <countryId>13</countryId>
+                        <name>Russia</name>
                     </country>
-                    <name>Paris</name>
+                    <name>Moscow</name>
                 </city>
-                <latitude>49.0097</latitude>
-                <longitude>2.5479</longitude>
-                <name>Charles de Gaulle Airport</name>
+                <latitude>55.9726</latitude>
+                <longitude>37.4144</longitude>
+                <name>Sheremetyevo International Airport</name>
             </destinationAirport>
-            <flightId>195</flightId>
-            <price>39.9</price>
+            <flightId>201</flightId>
+            <price>214.4</price>
             <sourceAirport>
                 <airportId>14</airportId>
                 <city>
@@ -35,6 +71,78 @@
                 <latitude>52.3105</latitude>
                 <longitude>4.7683</longitude>
                 <name>Amsterdam Airport Schiphol</name>
+            </sourceAirport>
+        </flight>
+        <flight>
+            <airline>
+                <airlineId>13</airlineId>
+                <name>Aeroflot</name>
+            </airline>
+            <destinationAirport>
+                <airportId>9</airportId>
+                <city>
+                    <cityId>9</cityId>
+                    <country>
+                        <countryId>9</countryId>
+                        <name>China</name>
+                    </country>
+                    <name>Beijing</name>
+                </city>
+                <latitude>40.0799</latitude>
+                <longitude>116.6031</longitude>
+                <name>Beijing Capital International Airport</name>
+            </destinationAirport>
+            <flightId>179</flightId>
+            <price>579.62</price>
+            <sourceAirport>
+                <airportId>13</airportId>
+                <city>
+                    <cityId>13</cityId>
+                    <country>
+                        <countryId>13</countryId>
+                        <name>Russia</name>
+                    </country>
+                    <name>Moscow</name>
+                </city>
+                <latitude>55.9726</latitude>
+                <longitude>37.4144</longitude>
+                <name>Sheremetyevo International Airport</name>
+            </sourceAirport>
+        </flight>
+        <flight>
+            <airline>
+                <airlineId>9</airlineId>
+                <name>Air China</name>
+            </airline>
+            <destinationAirport>
+                <airportId>5</airportId>
+                <city>
+                    <cityId>5</cityId>
+                    <country>
+                        <countryId>5</countryId>
+                        <name>Australia</name>
+                    </country>
+                    <name>Sydney</name>
+                </city>
+                <latitude>-33.9461</latitude>
+                <longitude>151.1772</longitude>
+                <name>Sydney Airport</name>
+            </destinationAirport>
+            <flightId>119</flightId>
+            <price>1246.38</price>
+            <sourceAirport>
+                <airportId>9</airportId>
+                <city>
+                    <cityId>9</cityId>
+                    <country>
+                        <countryId>9</countryId>
+                        <name>China</name>
+                    </country>
+                    <name>Beijing</name>
+                </city>
+                <latitude>40.0799</latitude>
+                <longitude>116.6031</longitude>
+                <name>Beijing Capital International Airport</name>
             </sourceAirport>
         </flight>
     </flights>

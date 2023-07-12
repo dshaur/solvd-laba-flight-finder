@@ -4,13 +4,12 @@ import com.solvd.block3.graphs.Graph;
 import com.solvd.block3.interfaces.IFlightService;
 import com.solvd.block3.mappers.FlightMapper;
 import com.solvd.block3.models.Flight;
+import com.solvd.block3.utilities.DistanceCalculator;
 import com.solvd.block3.utilities.SessionUtil;
 import org.apache.ibatis.session.SqlSession;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
+
 
 public class FlightServiceMyBatis implements IFlightService {
     private FlightMapper flightMapper;
@@ -85,7 +84,7 @@ public class FlightServiceMyBatis implements IFlightService {
     }
 
     @Override
-    public List<Integer> findShortestPath(int sourceAirportId, int destinationAirportId) {
+    public List<Integer> findShortestPath(int sourceAirportId, int destinationAirportId, boolean useDistance) {
         try (SqlSession session = SessionUtil.openSession()) {
             flightMapper = session.getMapper(FlightMapper.class);
             ArrayList<Flight> flights = flightMapper.selectFlights();
@@ -96,7 +95,19 @@ public class FlightServiceMyBatis implements IFlightService {
 
             Graph graph = new Graph();
             for (Flight flight : flights) {
-                graph.addEdge(flight.getSourceAirport().getAirportId(), flight.getDestinationAirport().getAirportId(), flight.getPrice());
+                double weight = flight.getPrice();
+
+                if (useDistance)
+                {
+                    weight = DistanceCalculator.calculateDistance
+                    (flight.getSourceAirport().getLatitude(),
+                    flight.getSourceAirport().getLongitude(),
+                    flight.getDestinationAirport().getLatitude(),
+                    flight.getDestinationAirport().getLongitude()
+                    );
+                }
+
+                graph.addEdge(flight.getSourceAirport().getAirportId(), flight.getDestinationAirport().getAirportId(), weight);
             }
 
             List<Integer> path = graph.shortestPath(sourceAirportId, destinationAirportId);

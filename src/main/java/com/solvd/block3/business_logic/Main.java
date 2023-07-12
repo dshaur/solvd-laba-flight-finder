@@ -8,8 +8,6 @@ import com.solvd.block3.ui.UiUtils;
 import com.solvd.block3.xml.XmlMaker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -33,25 +31,22 @@ public class Main {
         }
 
         String mode = UiUtils.getMode();
+        List<Flight> path;
 
         if (mode.equalsIgnoreCase("s")) {
             LOGGER.info("Finding shortest flight route...");
-            Flight shortest = UiUtils.findShortestFlight(origin, destination);
-            List<Flight> singleFlight = new ArrayList<Flight>();
-            singleFlight.add(shortest);
-            UiUtils.printFlightDirections(singleFlight);
+            path = UiUtils.findBestFlights(origin, destination, true);
 
-            XmlMaker.makeXml(XML_PATH, shortest);
-            JsonMaker.makeJson(JSON_PATH, shortest);
-        } else if (mode.equalsIgnoreCase("c")) {
+        } 
+        else {
             LOGGER.info("Finding cheapest flight route...");
-            List<Flight> flightsOfCheapest = UiUtils.findCheapestPathFlights(origin, destination);
-
-            UiUtils.printFlightDirections(flightsOfCheapest);
-
-            FlightList list = new FlightList(flightsOfCheapest);
-            XmlMaker.makeXml(XML_PATH, list);
-            JsonMaker.makeJson(JSON_PATH, list);
+            path = UiUtils.findBestFlights(origin, destination, false);
         }
+
+        UiUtils.printFlightDirections(path);
+
+        FlightList list = new FlightList(path);
+        XmlMaker.makeXml(XML_PATH, list);
+        JsonMaker.makeJson(JSON_PATH, list);
     }
 }
